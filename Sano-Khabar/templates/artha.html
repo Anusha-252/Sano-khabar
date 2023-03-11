@@ -1,0 +1,54 @@
+{%load static %}
+{% include 'ads2_rj_ar.html' %}
+<div class="np_artha_primecontainer">
+  <div class="np_artha_news_ads_flex">
+    <div class="np_artha_maincontainer">
+      <div class="np_artha_heading">
+        <h4>{{section2_name.name}}</h4>
+      </div>
+      <div class="np_artha_newspart">
+        <!-- news left part starts-->
+        <div class="np_artha_newspart_left">
+          <a href="{% url 'nepali_per_page' section2_display1.id %}">
+            <div class="np_artha_newspart_left_small_container">
+              <div class="np_artha_newspart_left_small_container_image">
+                <img src="{{section2_display1.photo_img.url}}" alt="" />
+              </div>
+              <div class="np_artha_newspart_left_small_container_description">
+                <h1>{{section2_display1.title}}</h1>
+              </div>
+            </div>
+          </a>
+          <a href="{% url 'nepali_per_page' section2_display2.id %}">
+            <div class="np_artha_newspart_right_small_container">
+              <div class="np_artha_newspart_right_small_container_image">
+                <img src="{{section2_display2.photo_img.url}}" alt="" />
+              </div>
+              <div class="np_artha_newspart_right_small_container_description">
+                <h1>{{section2_display2.title}}</h1>
+              </div>
+            </div>
+          </a>
+        </div>
+        <!-- news left part  ends-->
+        <!-- news right part starts -->
+        <div class="np_artha_newspart_right">
+          {% for i in section2_display3 %}
+          <a href="{% url 'nepali_per_page' i.id %}">
+            <div class="np_artha_newspart_right_small_container">
+              <div class="np_artha_newspart_right_small_container_image">
+                <img src="{{i.photo_img.url}}" alt="" />
+              </div>
+              <div class="np_artha_newspart_right_small_container_description">
+                <h1>{{i.title}}</h1>
+              </div>
+            </div>
+          </a>
+          {% endfor %}
+        </div>
+        <!-- news right part ends -->
+      </div>
+    </div>
+    {% include 'ads3_ar.html' %}
+  </div>
+</div>

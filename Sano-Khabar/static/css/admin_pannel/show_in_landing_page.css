@@ -1,0 +1,161 @@
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    background-color: #F2F2F2;
+}
+
+a {
+    text-decoration: none;
+}
+
+.newsportal_adminpannel_maincontainer {
+    display: block;
+}
+.newsportal_adminpannel_subcontainer {
+    display: flex;
+    flex-direction: row-reverse;
+    height: 100%;
+    width: 100%;
+}
+
+
+/* css for show in landing page starts */
+
+.npap_landingpage_container {
+    height: auto;
+    width: 84%;
+}
+
+.npap_landingpage_header {
+    display: flex;
+    padding-top: 25px;
+}
+
+.npap_landingpage_navigation {
+    width: 7%;
+}
+
+.npap_landingpage_navigation i {
+    float: right;
+    margin: 38px 30px 0px 0px;
+}
+
+.npap_landingpage_title {
+    width: 93%;
+}
+
+.npap_landingpage_title h4 {
+    font-size: x-large;
+}
+
+.npap_landingpage_maincontent {
+    width: 70%;
+    margin-left: 50px;
+    font-weight: 500;
+    font-size: 1.2em;
+    background-color: #FFFFFF;
+    border-radius: 25px;
+    border: solid 2px #15BBF8;
+}
+
+.npap_landingpage_maincontent p {
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+}
+
+.npap_landingpage_maincontent_eachrow {
+    width: 100%;
+    display: flex;
+}
+
+.npap_landingpage_maincontent_block1 {
+    width: 27%;
+    margin: 22px 40px 15px 23px;
+    background-color: #474747;
+    cursor: pointer;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    display: flex;
+}
+
+.npap_landingpage_maincontent_block11 {
+    width: 70%;
+    display: flex;
+
+}
+
+.npap_landingpage_maincontent_block12 {
+    width: 30%;
+    margin: 12px 0px 0px 0px;
+}
+
+.npap_landingpage_maincontent_block11 i {
+    margin: 15px 11px 0px 0px;
+}
+
+.npap_landingpage_maincontent_block2 {
+    width: 70%;
+    display: flex;
+    margin-left: 40px;
+}
+
+.npap_landingpage_maincontent_block21 {
+    background-color: #474747;
+    text-align: center;
+    cursor: pointer;
+    color: white;
+    border-radius: 5px;
+    margin: auto;
+    width: 33.33%;
+    margin: 22px 21px 15px 23px;
+}
+
+.npap_landingpage_maincontent_block21:hover {
+    background-color: #15BBF8;
+}
+.npap_landingpage_maincontent_block21_delete {
+    background-color: #FF0505;
+    text-align: center;
+    cursor: pointer;
+    color: white;
+    border-radius: 5px;
+    margin: auto;
+    width: 33.33%;
+    margin: 22px 21px 15px 23px;
+}
+
+.npap_landingpage_maincontent_block21_delete:hover {
+    background-color: #AC0000;
+}
+
+.npap_landingpage_maincontent_block22 {
+    background-color: #474747;
+    text-align: center;
+    cursor: pointer;
+    color: white;
+    border-radius: 5px;
+    margin: auto;
+    width: 33.33%;
+    margin: 22px 21px 15px 23px;
+}
+
+.npap_landingpage_maincontent_block23 {
+    background-color: #474747;
+    text-align: center;
+    cursor: pointer;
+    color: white;
+    border-radius: 5px;
+    margin: auto;
+    width: 33.33%;
+    margin: 22px 21px 15px 23px;
+}
+
+.npap_landingpage_active {
+    background-color: #15BBF8;
+}
+
+
+/* css for show in landing page ends */

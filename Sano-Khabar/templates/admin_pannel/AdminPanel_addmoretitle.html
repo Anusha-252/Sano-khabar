@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+{% load static %} {% load widget_tweaks %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="{% static  'css/admin_pannel/add_more_title.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/admin_pannel/navbar.css' %}">
+    <link rel="stylesheet" href="{% static 'css/admin_pannel/sidebar.css' %}"/>
+    <link rel="stylesheet" href="{% static 'fontawesome-free-6.0.0-beta3-web/css/all.css' %}"/>
+    <title>Document</title>
+    <script src="{% static 'js/admin_pannel.js' %}"></script>
+</head>
+
+<body>
+<div class="newsportal_adminpannel_maincontainer">
+    <!-- navbar starts -->
+    {% include 'admin_pannel/admin_panel_navbar.html' %}
+
+    <!-- navbar ends -->
+    <div class="newsportal_adminpannel_subcontainer">
+        <!-- sidebar starts -->
+        {% include 'admin_pannel/sidebar.html' %}
+
+        <!-- sidebar ends -->
+        <!-- mainbody starts -->
+        <div class="np_ap_add_ntc_container">
+            <div class="np_ap_add_ntc_form">
+                <!-- heading form starts -->
+
+                <form action="{% url 'ap_add_more_post' %}" method="post">
+                    {% csrf_token %}
+                    <div class="ntc_f_div">
+                        <div class="np_ap_ntc_fname">
+                            <label for="fname">Title Name :</label>
+                        </div>
+
+                        <div class="np_ap_ntc_ftext">
+                            {% render_field form.name placeholder="Category Name" %}
+                            {{form.is_active}}
+                        </div>
+                    </div>
+                    <!--  heading form ends -->
+                    <!--layout selection starts-->
+                    <div class="np_ap_ntc_landing_layout">
+                        <p>Select Layout</p>
+                        <select class="np_ap_ntc_landing_layout_items" name="_section" id="_section_id">
+                            <option value="0">none</option>
+                            <option value="1">Layout 1</option>
+                            <option value="2">Layout 2</option>
+                            <option value="3">Layout 3</option>
+                        </select>
+                    </div>
+                    <!--layout selection ends-->
+                    <!-- landing page starts -->
+                    <div class="np_ap_ntc_landing">
+                        <div class="np_ap_ntc_lname">
+                            <label for="fname">Show Layout Formats.</label>
+                        </div>
+                        <div class="np_ap_ntc_lbutton">
+                            <button class="ntc_landing_btn" onclick="OpenDiv()"></button>
+                        </div>
+                    </div>
+                    <!-- landing layout starts -->
+                    <!-- layout format starts -->
+                    <div class="np_ap_ntc_landing_page" id="form1">
+                        <h6>Layout Formats</h6>
+                        <div class="np_ap_ntc_landing_page_img">
+                            <div class="np_ap_lp_layout">
+                                <label for="layout_1">
+                                    <div class="np_ap_lp_layout1_p">
+                                        <P>LAYOUT 1</P>
+                                    </div>
+                                    <div class="np_ap_ntc_lp_img1">
+                                        <img src="{% static 'media/image/layout1.png' %}" alt="Image_here">
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="np_ap_lp_layout">
+                                <label for="layout_2">
+                                    <div class="np_ap_lp_layout1_p">
+                                        <P>LAYOUT 2</P>
+                                    </div>
+                                    <div class="np_ap_ntc_lp_img1">
+                                        <img src="{% static 'media/image/layout2.png' %}" alt="Image_here">
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="np_ap_lp_layout">
+                                <label for="layout_3">
+                                    <div class="np_ap_lp_layout1_p">
+                                        <P>LAYOUT 3</P>
+                                    </div>
+                                    <div class="np_ap_ntc_lp_img1">
+                                        <img src="{% static 'media/image/layout3.png' %}" alt="Image_here">
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- layout format starts -->
+
+                    <!-- save button starts -->
+                    <div class="np_ap_ntc_save_btn">
+                        <button class="ntc_sbtn">Save</button>
+                    </div>
+                    <!-- save button ends -->
+                    <!-- </div> -->
+            </div>
+        </div>
+        </form>
+        <!-- mainbody ends -->
+    </div>
+</div>
+</body>
+<script>
+    var loadFile = function(event) {
+      var image = document.getElementById('output');
+      image.src = URL.createObjectURL(event.target.files[0]);
+    };
+
+
+
+</script>
+</html>

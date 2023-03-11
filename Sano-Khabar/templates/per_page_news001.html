@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    {% include 'meta.html' %}
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Per news page</title>
+    <link rel="stylesheet" href="{% static 'css/pernews.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/mukhyasamachar.css'  %}"/>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}"/>
+    <link rel="stylesheet" href="{% static 'fontawesome-free-6.0.0-beta3-web/css/all.css' %}"/>
+     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+</head>
+
+<body>
+{% include 'header001.html' %}
+<!-- per page news container starts -->
+
+<div class="np_pernews_first_container">
+    <div class="np_pernews_content">
+        <!-- first container containing heading and the hr -->
+        <div class="np_pernews_heading">
+            <span>{{standard_news_query.title}}</span>
+            <hr color="red" noshade/>
+        </div>
+        <div class="np_pernews_time_date">
+            <i class="far fa-clock" style="font-size: 17px"></i>
+            <span>{{np_date}}</span>
+        </div>
+        <div class="np_pernews_imagepart">
+            <img src="{{standard_news_query.photo_img.url}}" alt=""/>
+        </div>
+        <div class="np_pernews_description">
+            <p>{{standard_news_query.description|safe}}</p>
+        </div>
+        <div class="np_pernews_description_ending_hr">
+            <hr align="left" color="red" noshade width="95%"/>
+        </div>
+        <h2>Comment Here...</h2>
+        <!-- news description ends here -->
+
+        <!-- comment section starts here -->
+        <form action="{% url 'post_comment' standard_news_query.id %}" method="post">
+            {%csrf_token%}
+            <div class="np_pernews_comment_container">
+                <div class="np_pernews_comment_textarea">
+              <textarea name="comment" id="comment" cols="115" rows="10" placeholder="प्रतिक्रिया दिनुहोस्"></textarea>
+                </div>
+                <div class="np_pernews_commentsection_row2">
+                    <textarea name="user_name" id="1" placeholder="Name"></textarea>
+                </div>
+                <div class="np_pernews_commentsection_row3">
+                    <textarea name="email" id="2" placeholder="Email address"></textarea>
+                </div>
+                </br>
+                <div class="np_pernews_comment_button">
+                    <button type="submit" class="np_pernews_comment_button_submit">
+                        प्रतिक्रिया दिनुहोस्
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+    {% include 'ads5_perpage.html' %}
+    <!-- comment section ends here -->
+</div>
+
+
+    <div class="np_pernews_last_container">
+    {% comment %} &lt;!&ndash; &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt; {% endcomment %}
+    <div class="np_pernews_cmnt_aft_container">
+        {% for i in news_comment %}
+        <div class="np_pernews_cmnt_aft">
+        
+            <div class="np_pernews_cmnt_aft_head">
+                <p>{{i.user_name}}</p>
+
+                <span>{{i.time_uploaded}}</span>
+           </div>
+            <hr color="red" noshade/>
+          <div class="np_pernews_cmnt_aft_main_cmnt">
+           <span>{{i.comment}}</span> 
+          </div>
+          <div class="np_pernews_cmnt_aft_lr">
+              <div class="np_pernews_cmnt_aft_lr_content">
+                   <div class="np_pernews_cmnt_aft_lr_likebtn">
+                       <button>
+                           <div class="buttton_content">
+                                <i class="fa-regular fa-thumbs-up"></i><span>5</span>
+                            </div>
+                        </button>
+                  </div>
+                  <div class="np_pernews_cmnt_aft_lr_dislikebtn">
+                       <button>
+                           <div class="buttton_content">
+                              <i class="fa-regular fa-thumbs-down"></i><span>1</span>
+                          </div>
+                       </button>
+                   </div>
+               </div>
+            </div>
+        </div>
+        {% endfor%}
+<!--        {% for i in latest_news_query %}-->
+<!--        <div class="np_tk_snews_container">-->
+<!--            <div class="np_tk_snews_imagepart">-->
+<!--                <img src="{{i.photo_img.url}}" alt=""/>-->
+<!--            </div>-->
+<!--            <div class="np_tk_snews_description_mtitle">-->
+<!--                <h1>{{i.title}}</h1>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        {% endfor %}-->
+<!--    </div>-->
+<!--    &lt;!&ndash; code for the taja samachar part along with the contents ends here-&#45;&#45; &ndash;&gt;-->
+</div>
+{% include 'manoranjan.html' %}
+{% include 'video_pannel.html' %}
+{% include 'footer.html' %}
+</body>
+</html>

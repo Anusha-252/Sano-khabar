@@ -1,0 +1,91 @@
+{% load static %}
+
+<div class="np_hnews_container">
+    <div class="np_hnews_content">
+        <!-- first container containing heading and the hr -->
+        <div class="np_hnews_heading">
+            <span>{{section1_name.name}}</span>
+            <hr color="red" noshade/>
+        </div>
+        <!-- code copied from the front news section which is the second conatiner here-->
+        <a href="{% url 'nepali_per_page' section1_display1.id %}">
+            <div class="np_fnews_container">
+                <div class="np_fnews_imagepart">
+                    <img src="{{section1_display1.photo_img.url}}" alt=""/>
+                    <!-- code for the mobile form to be displayed start here-->
+                    <div class="mobile_content">
+                        <div class="np_fnews_description_mhead_mobile">
+                            <h1>{{section1_display1.title}}</h1>
+                        </div>
+                        <div class="np_fnews_description_lr_time_mobile">
+                            <i class="far fa-clock" style="font-size: 17px"></i>
+                            <p>{{section1_display1.date_uploaded}}</p>
+                        </div>
+                    </div>
+                    <!-- code for the mobile form to be displayed ends here -->
+                </div>
+
+                <!-- html code for the description part starts here -->
+                <div class="np_fnews_description">
+                    <div class="np_fnews_description_mhead">
+                        <h1>{{section1_display1.title}}</h1>
+                    </div>
+                    <div class="np_fnews_description_mnews">
+                        <p>{{section1_display1.news_summary}}</p>
+                    </div>
+                    <div class="np_fnews_description_lr">
+                        <div class="np_fnews_description_lr_time">
+                            <i class="far fa-clock" style="font-size: 17px"></i>
+                            <p>{{section1_display1.date_uploaded}}</p>
+                        </div>
+                        <div class="np_fnews_description_lr_ac">
+                            <a href="">थप हेर्नुहोस</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- html code for the description part ends here -->
+            </div>
+        </a>
+        <!-- code for the extra 3 small news and the last container-->
+        <div class="np_hnews_last_container">
+            <div class="np_hnews_last_news">
+                {% for i in section1_display2 %}
+                <!-- first column -->
+                <div class="np_manoranjan_container" id="first_column">
+                    <a href="{% url 'nepali_per_page' i.id %}">
+                        <div class="np_manoranjan_imagepart">
+                            <img src="{{i.photo_img.url}}" alt=""/>
+                        </div>
+                        <div class="np_manoranjan_description">
+                            <div class="np_manoranjan_mhead">
+                                <h1>{{i.title}}</h1>
+                            </div>
+                            <div class="np_manoranjan_lr">
+                                <i class="far fa-clock" style="font-size: 17px"></i>
+                                <p>{{i.date_uploaded}}</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <div class="np_tk_container_content">
+        <div class="np_hnews_heading">
+            <span>ताजा समाचार</span>
+            <hr color="red" noshade/>
+        </div>
+        {% for item in latest_news_query %}
+        <div class="np_tk_snews_container">
+            <div class="np_tk_snews_imagepart">
+                <img src="{{item.photo_img.url}}" alt=""/>
+            </div>
+            <div class="np_tk_snews_description_mtitle">
+                <h1>{{item.title}}</h1>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    
+</div>

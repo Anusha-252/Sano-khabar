@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+{% load static %} {% load mptt_tags %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="{% static  'css/admin_pannel/titles_name_changing.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/admin_pannel/navbar.css' %}">
+    <link rel="stylesheet" href="{% static 'css/admin_pannel/sidebar.css' %}"/>
+
+    <link rel="stylesheet" href="{% static 'fontawesome-free-6.0.0-beta3-web/css/all.css' %}"/>
+    <title>Rename_Title_Name</title>
+    <script src="{% static 'js/admin_pannel.js' %}"></script>
+</head>
+
+<body>
+<div class="newsportal_adminpannel_maincontainer">
+    <!-- navbar starts -->
+    {% include 'admin_pannel/admin_panel_navbar.html' %}
+    <!-- navbar ends -->
+    <div class="newsportal_adminpannel_subcontainer">
+        <!-- sidebar starts -->
+        {% include 'admin_pannel/sidebar.html' with title_pager=title_high %}
+        <!-- sidebar ends -->
+        <!-- mainbody starts -->
+        <div class="npap_titlepage_container">
+            <div class="npap_titlepage_header">
+                <div class="npap_titlepage_navigation">
+                    <i class="fa-solid fa-angle-left"></i>
+                </div>
+                <div class="npap_titlepage_title">
+                    <h4>Titles Name</h4>
+                </div>
+            </div>
+            <div class="npap_titlepage_maincontent">
+                <div class="npap_titlepage_maincontent_left">
+                    {% recursetree category_query %}
+
+                    <div class="npap_titlepage_maincontent_left_row">
+                        <div class="npap_titlepage_maincontent_block1">
+                            <p>{{node.name}}</p>
+                        </div>
+
+                        <div class="npap_titlepage_maincontent_navigation">
+                            <i class="fa-solid fa-angles-right"></i>
+                        </div>
+                        <div
+                                class="npap_titlepage_maincontent_block2"
+                                onclick="openform('popup_myForm', {{node.id}})"
+                        ></div>
+                    </div>
+                    {% endrecursetree %}
+                </div>
+            </div>
+
+            <div class="npap_titlepage_form-popup" id="popup_myForm">
+                <div class="npap_titlepage_popup_info1">
+                    <button
+                            type="button"
+                            class="npap_titlepage_closebtn"
+                            onclick="closeform('popup_myform')"
+                    >
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <div class="npap_titlepage_popup_maincontent">
+                        <form action="{% url 'ap_rename_category' %}" method="post">
+                            {% csrf_token %}
+                            <div class="npap_titlepage_maincontent_title">
+                                <h2>Rename</h2>
+                            </div>
+                            <div class="npap_titlepage_maincontent_input">
+                                {{ form.name }}
+
+                                <input
+                                        type="hidden"
+                                        id="_category_id"
+                                        name="category_ids"
+                                />
+                            </div>
+                            <div class="npap_titlepage_maincontent_save">
+                                <button type="submit" value="Submit">Save</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- mainbody ends -->
+    </div>
+</div>
+</body>
+</html>

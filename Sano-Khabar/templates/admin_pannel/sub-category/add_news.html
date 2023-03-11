@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+{% load static %} {% load widget_tweaks %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="{% static 'css/admin_pannel/merging_ss_edit_news.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/admin_pannel/layout_page.css' %}"/>
+    <link rel="stylesheet" href="{% static 'fontawesome-free-6.0.0-beta3-web/css/all.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/admin_pannel/navbar.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/admin_pannel/sidebar.css' %}"/>
+    <title>
+        {% if edit_news %}
+            Edit News
+        {% else %}
+            Add News
+        {% endif %}
+    </title>
+    <script src="{% static 'js/admin_pannel.js' %} "></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+
+<body>
+<div class="newsportal_adminpannel_maincontainer">
+    {% include 'admin_pannel/admin_panel_navbar.html' %}
+
+    <div class="newsportal_adminpannel_subcontainer">
+        <div class="np_ap_sc1">
+            {% include 'admin_pannel/sidebar.html' %}
+        </div>
+        <!-- mainbody starts -->
+        <div class="np_ap_sc2">
+            <div class="np_ap_newsform">
+                <!--  nf heading starts-->
+                <div class="np_ap_nf_heading">
+                    <div class="np_ap_nf_title">
+                        <i class="fa-solid fa-angle-left"></i>
+                        <h4>Add News</h4>
+                    </div>
+                </div>
+                <!-- nf heading ends -->
+                <form action="{% url 'ap_add_news_post' %}" method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <!-- nf  table content starts-->
+                    <div class="np_ap_nf_content">
+                        <div class="np_ap_nf_fp_content">
+                            <div class="f_div">
+                                <div class="np_ap_fname">
+                                    <label for="fname">Title :</label>
+                                </div>
+                                <div class="np_ap_ftext">
+                                    {% render_field form.title id="title"%}
+                                </div>
+                            </div>
+                            <div class="f_div">
+                                <div class="np_ap_fname">
+                                    <label for="fname">Author :</label>
+                                </div>
+                                <div class="np_ap_ftext">{{form.editor_name}}</div>
+                            </div>
+                            <div class="f_div">
+                                <div class="np_ap_fname">
+                                    <label for="fname">Location :</label>
+                                </div>
+                                <div class="np_ap_ftext">{{form.location}}</div>
+                            </div>
+
+                            <div class="f_div">
+                                <div class="np_ap_fname">
+                                    <label for="fname">Main News :</label>
+                                </div>
+                                <div id="div-main-news">
+                                    {{form.is_main_news}}
+                                </div>
+                            </div>
+
+                            <div class="f_div">
+                                <div class="np_ap_fname">
+                                    <label for="img_upload">Upload Image :</label>
+                                </div>
+                                <div class="np_ap_ntc_thumb_text">
+                                    <label class="img_upload">
+                                        <div class="ntc_upload_button">
+                                            <input name="photo_img" accept="image/*" id="file"
+                                                   onchange="loadFile(event)"
+                                                   type="file"/> Choose Image
+                                        </div>
+                                    </label>
+                                    <p class="ntc_upload_image_display"><img id="output"/></p>
+                                    {% if edit_news %}
+                                        <div class="thumbnails_div">{{form.photo_img}}</div>
+                                    {% endif %}
+                                </div>
+                            </div>
+
+                            <div class="f_div">
+                                <div class="np_ap_fname">
+                                    <label for="fname">News summary :</label>
+                                </div>
+                                <div class="np_ap_ftext">
+                                    {% render_field form.news_summary rows="30" cols="120" %}
+                                </div>
+                            </div>
+
+                        </div>
+
+                        {{form.description}} {{form.media}} {{form.date_time_picker}}
+
+                        {{form.category}}
+                        <br/>
+
+                        <div class="np_ap_nf_tp">
+                            <div class="np_ap_nf_tp_content">
+                                <div class="np_ap_update">
+                                    <button class="np_ap_update_btn" type="submit">
+                                        {% if edit_news %}
+                                            Update
+                                        {% else %}
+                                            Post
+                                        {% endif %}
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <!-- nf table content ends -->
+            </div>
+        </div>
+        <!-- mainbody ends -->
+    </div>
+</div>
+</body>
+
+<script>
+    $(document).ready(function() {
+        $('#is_main_newss').val('false');
+
+        $('#is_main_news').click(function() {
+            if ($("#is_main_news").is(":checked") == true) {
+                $('#is_main_news').val('true');
+            } else {
+                $('#is_main_news').val('false');
+            }
+        });
+    })
+
+    var loadFile = function(event) {
+        var image = document.getElementById('output');
+        image.src = URL.createObjectURL(event.target.files[0]);
+    };
+</script>
+</html>

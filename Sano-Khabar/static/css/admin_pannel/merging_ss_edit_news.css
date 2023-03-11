@@ -1,0 +1,309 @@
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.newsportal_adminpannel_maincontainer {
+    display: block;
+}
+.newsportal_adminpannel_subcontainer_edit_brking_news{
+
+    display: flex;
+    flex-direction: row-reverse;
+    height: 100%;
+    width: 100%;
+}
+.mystyle {
+    display: block !important;
+}
+.np_ap_sc1{
+width:12%;
+}
+.np_ap_sc2{
+    width:88%;
+    margin-top:54px;
+    }
+/* css for sub cont 2 starts */
+
+
+.np_ap_newsform {
+    width: 100%;
+    background-color: #F2F2F2;
+    margin: 0px;
+    padding: 0px;
+    margin-left:13%;
+}
+
+
+/* nf heading css starts */
+
+.np_ap_nf_heading {
+    width: 90%;
+    margin: 20px auto;
+    display: flex;
+}
+
+.np_ap_nf_title {
+    width: 50%;
+    display: flex;
+}
+
+.np_ap_nf_title i {
+    margin: 0px;
+    padding: 9px 15px 0px 0px;
+}
+
+.np_ap_nf_title h4 {
+    margin: 0px;
+    padding: 2px;
+    font-size: 20px;
+}
+
+.np_ap_nf_buttons {
+    width: 50%;
+    text-align: right;
+}
+
+.np_ap_editbtn {
+    width: 76px;
+    height: 30px;
+    background-color: #138057;
+    cursor: pointer;
+    padding: 5px 5px 5px 5px;
+    color: #ffffff;
+    border: 2px solid #138057;
+    border-radius: 10px;
+    font-weight: 20;
+}
+
+.np_ap_deletebtn {
+    width: 76px;
+    height: 30px;
+    background-color: #C70505;
+    cursor: pointer;
+    padding: 5px 5px 5px 5px;
+    color: #ffffff;
+    border: 2px solid#C70505;
+    border-radius: 10px;
+    font-weight: 20;
+}
+
+.np_ap_mainbtn {
+    width: 76px;
+    height: 30px;
+    background-color: #F8A515;
+    cursor: pointer;
+    padding: 5px 5px 5px 5px;
+    color: #ffffff;
+    border: 2px solid #F8A515;
+    border-radius: 10px;
+    font-weight: 20;
+}
+
+
+/* nf heading css ends */
+
+
+/* nf  content css starts */
+
+.np_ap_nf_content {
+    width: 90%;
+    border-radius: 10px;
+    margin: 2px auto;
+    height: auto;
+    background-color: #FFFFFF;
+    box-shadow: inset;
+    padding: 10px;
+}
+
+.np_ap_nf_fp {
+    width: 90%;
+    margin: 10px auto 0px auto;
+}
+
+.np_ap_nf_fp_content {
+    width: 80%;
+    margin: 10px auto;
+}
+
+.f_div {
+    display: flex;
+}
+
+.np_ap_fname {
+    width: 15%;
+    padding: 20px;
+}
+
+.np_ap_ftext {
+    width: 85%;
+}
+
+input[type=text],
+select {
+    width: 93%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #f2f2f2;
+    border: none;
+}
+
+.np_ap_nf_sp {
+    width: 90%;
+    margin: 0px auto;
+}
+
+.np_ap_nf_sp_content {
+    width: 80%;
+    margin: 10px auto;
+}
+
+.np_ap_ftext_02 {
+    width: 100%;
+    margin-left: 20px;
+}
+
+.np_ap_ftext_02_comment {
+    resize: none;
+    height: 260px;
+    width: 90%;
+    background-color: #f2f2f2;
+    border: none;
+    padding: 10px;
+    opacity: 0.8;
+    font-family: Segoe UI;
+}
+
+.np_ap_nf_tp {
+    width: 90%;
+    margin: 0px auto;
+}
+
+.np_ap_nf_tp_content {
+    width: 80%;
+    margin: 10px auto;
+}
+
+
+/* nf content css ends */
+
+
+/* thumbnail starts */
+
+.thumbnails_div {
+    display: flex;
+}
+
+.np_ap_thumb_name {
+    width: 15%;
+    padding: 20px;
+}
+
+.np_ap_thumb_text {
+    width: 85%;
+    padding: 15px;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.upload_button {
+    width: 20%;
+    height: 20pxpx;
+    background-color: #F2F2F2;
+    cursor: pointer;
+    padding: 5px 5px 5px 5px;
+    color: #2C2A2E;
+    border: 1px solid#707070;
+    border-radius: 5px;
+    font-weight: 20;
+    text-align: center;
+}
+
+
+/* nf thumbnail css ends */
+
+
+/* update button css starts */
+
+.np_ap_update {
+    text-align: center;
+}
+
+.np_ap_update_btn {
+    width: 12%;
+    height: 30px;
+    background-color: #15BBF8;
+    cursor: pointer;
+    padding: 5px 5px 5px 5px;
+    color: #ffffff;
+    border: 2px solid#15BBF8;
+    border-radius: 10px;
+    font-weight: 20;
+    text-align: center;
+}
+
+
+/* update button css ends */
+
+
+/* css for sub cont 2  ends */
+/* for image display */
+
+.np_ap_ntc_thumb_name {
+    width: 10%;
+    padding: 20px 0px;
+}
+
+.np_ap_ntc_thumb_text {
+    width: 50%;
+    padding: 15px 0px;
+}
+
+.np_ap_ntc_thumb_text input[type="file"] {
+    display: none;
+}
+
+.ntc_upload_button {
+    width: 54%;
+    height: 24px;
+    background-color: white;
+    cursor: pointer;
+    padding: 5px 5px 5px 5px;
+    border: 2px solid#d4cccc;
+    margin-left:10px;
+
+    border-radius: 5px;
+    font-weight: 20;
+    text-align: center;
+}
+.img_upload{
+    display:flex;
+}
+.ntc_upload_image_display{
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-left:30px;
+    width: auto;
+    height: auto;
+}
+.ntc_upload_image_display img{
+width:100%;
+height:100%;
+
+}
+.django-ckeditor-widget{
+width:100%;
+}
+

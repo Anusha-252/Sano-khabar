@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/admin_pannel/breaking_news_list_page.css' %}">
+    <link rel="stylesheet" href="{% static 'fontawesome-free-6.0.0-beta3-web/css/all.css' %}">
+    <link rel="stylesheet" href="{% static 'css/admin_pannel/navbar.css' %}">
+    <link rel="stylesheet" href="{% static 'css/admin_pannel/sidebar.css' %}"/>
+    <title>Youtube</title>
+    <script src="{% static 'js/admin_pannel.js' %}"></script>
+</head>
+
+<body>
+<div class="newsportal_adminpannel_maincontainer">
+    {% include 'admin_pannel/admin_panel_navbar.html' %}
+    <div class="newsportal_adminpannel_subcontainer">
+         {% include 'admin_pannel/sidebar.html' with title_pager=title_high %}
+        <!-- mainbody starts -->
+        <div class="np_ap_tableform_content">
+            <!-- tableform firstpart starts-->
+            <div class="np_ap_tableform_content_fp">
+                <div class="np_ap_tf_left">Youtube Link</div>
+                <div class="np_ap_tf_right">
+                    <a href="{% url 'ap_add_youtube' %}"
+                       class="np_ap_tf_addbtn">Add Youtube_News</a>
+                </div>
+            </div>
+            <!-- tableform firstpart ends-->
+
+            <!-- tableform secondpart starts-->
+            <div class="np_ap_tableform_content_sp">
+                <table id="np_ap_table">
+                    <tr>
+                        <th id="np_ap_sp_1">SN</th>
+                        <th id="np_ap_sp_2">Title</th>
+                        <th id="np_ap_sp_3">Time</th>
+                        <th id="np_ap_sp_4">Date</th>
+                        <th id="np_ap_sp_7">Action</th>
+                    </tr>
+                    {% for item in youtube_query %}
+                    <tr>
+                        <td>{{forloop.counter}}</td>
+                        <td>{{item.title}}</td>
+                        <td>{{item.time_uploaded}}</td>
+                        <td>{{item.date_uploaded}}</td>
+
+                        <td>
+                            <a href="{% url 'admin_edit_youtube_page' item.id %}">
+                                <button class="np_ap_viewbtn">Edit</button>
+                            </a>
+
+                            <a href="{% url 'admin_delete_youtube_page' item.id %}">
+                                <button class="np_ap_deletebtn">Delete</button>
+                            </a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+            <!-- tableform secondpart ends-->
+
+            <!-- tablform pagination starts -->
+            <div class="np_ap_tableform_pagination">
+                <a href="#" id="pg_left">&laquo;</a>
+                <a href="#" class="active">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">6</a>
+                <a href="#" id="pg_right">&raquo;</a>
+            </div>
+            <!-- tablform pagination ends -->
+        </div>
+        <!-- mainbody ends -->
+    </div>
+</div>
+</body>
+
+</html>

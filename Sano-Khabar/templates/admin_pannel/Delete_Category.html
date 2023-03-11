@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static  'css/admin_pannel/show_in_landing_page.css' %}">
+    <link rel="stylesheet" href="{% static 'css/admin_pannel/sidebar.css' %}"/>
+
+    <link rel="stylesheet" href="{% static 'css/admin_pannel/navbar.css' %}">
+    <link rel="stylesheet" href="{% static 'fontawesome-free-6.0.0-beta3-web/css/all.css' %}">
+    <title>Add Category</title>
+    <script src="{% static 'js/admin_pannel.js' %}"></script>
+</head>
+<body>
+<div class="newsportal_adminpannel_maincontainer">
+    <!-- navbar starts -->
+    {% include 'admin_pannel/admin_panel_navbar.html' %}
+    <!-- navbar ends -->
+    <div class="newsportal_adminpannel_subcontainer">
+        <!-- sidebar starts -->
+        {% include 'admin_pannel/sidebar.html' with title_pager=title_high %}
+        <!-- sidebar ends -->
+        <!-- mainbody starts -->
+        <div class="npap_landingpage_container">
+            <div class="npap_landingpage_header">
+                <div class="npap_landingpage_navigation">
+                    <i class="fa-solid fa-angle-left"></i>
+                </div>
+                <div class="npap_landingpage_title">
+                    <h4>Delete Category</h4>
+                </div>
+            </div>
+            <div class="npap_landingpage_maincontent">
+                {% for category in category_query %}
+                <div class="npap_landingpage_maincontent_eachrow">
+                    <div class="npap_landingpage_maincontent_block1 npap_landingpage_active">
+                        <div class="npap_landingpage_maincontent_block11">
+                            <i class="fa-solid fa-microphone-lines"></i>
+                            <p>{{category.name}}</p>
+                        </div>
+                        <div class="npap_landingpage_maincontent_block12">
+                            <i class="fa-solid fa-angle-right"></i>
+                        </div>
+                    </div>
+                    <div class="npap_landingpage_maincontent_block2">
+                        <div class="npap_landingpage_maincontent_block21_delete ">
+                            <a href="{% url 'delete_category' category.id %}">
+                                <p>Delete</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <!-- mainbody ends -->
+    </div>
+</div>
+</body>
+</html>

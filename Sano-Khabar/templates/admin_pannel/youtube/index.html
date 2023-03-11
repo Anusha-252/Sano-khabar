@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+{% load static %}
+{% load mptt_tags %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="{% static 'css/added_title_sub_page.css' %}">
+    <link rel="stylesheet" href="{% static 'fontawesome-free-6.0.0-beta3-web/css/all.css' %}">
+    <link rel="stylesheet" href="{% static 'css/admin_pannel/navbar.css' %}">
+    <title>News</title>
+    <script src="{% static 'js/admin_pannel.js' %}"></script>
+</head>
+<body>
+<!-- mainbody starts -->
+<div class="newsportal_adminpannel_maincontainer">
+    {% include 'admin_panel/admin_panel_navbar.html' %}
+    <div class="newsportal_adminpannel_subcontainer">
+        {% include 'admin_pannel/sidebar.html' with title_pager=title_high %}
+        <!-- mainbody starts -->
+        <div class="np_ap_tf_title_content">
+            <!-- tf title firstpart starts-->
+            <div class="np_ap_tf_title_content_fp">
+                <div class="np_ap_tf_title_left">समाचार</div>
+                <div class="np_ap_tf_title_right">
+                    <a href="#" class="np_ap_tf_title_addbtn">Add समाचार</a>
+                </div>
+            </div>
+            <!-- tf title firstpart ends-->
+
+            <!-- tf title secondpart starts-->
+            <div class="np_ap_tf_title_content_sp">
+                <table id="np_ap_tf_title_table">
+                    <tr>
+                        <th id="np_ap_title_sp_1">SN</th>
+                        <th id="np_ap_title_sp_2">News</th>
+                        <th id="np_ap_title_sp_3">Time</th>
+                        <th id="np_ap_title_sp_4">Date</th>
+                        <th id="np_ap_title_sp_5">Author</th>
+                        <th id="np_ap_title_sp_6">Views</th>
+                        <th id="np_ap_title_sp_7">Action</th>
+                    </tr>
+                    {% for item in latest_news_query %}
+                    <tr>
+                        <td>{{forloop.counter}}</td>
+                        <td>{{item.standard_news.title}}</td>
+                        <td>{{item.time_uploaded}}</td>
+                        <td>{{item.date_uploaded}}</td>
+                        <td>{{item.standard_news.editor_name}}</td>
+                        <td>{{item.number_of_views}}</td>
+                        <td>
+                            <a href="{% url 'admin_edit_news_page' item.standard_news.id %}">
+                                <button class="np_ap_tf_title_viewbtn">View</button>
+                            </a>
+                            <button class="np_ap_tf_title_deletebtn">Delete</button>
+                            <button class="np_ap_tf_title_mainbtn_01">Main</button>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+            <!-- tf title secondpart ends-->
+
+            <!-- tf title pagination starts -->
+            <div class="np_ap_tf_title_pagination">
+                <a href="#" id="pg_left">&laquo;</a>
+                <a href="#" class="active">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">6</a>
+                <a href="#" id="pg_right">&raquo;</a>
+            </div>
+            <!-- tf title pagination ends -->
+        </div>
+        <!-- mainbody ends -->
+    </div>
+</div
+        <!-- mainbody ends -->
+</body>
+</html>

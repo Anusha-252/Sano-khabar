@@ -1,0 +1,397 @@
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    background-color: #F2F2F2;
+}
+
+a {
+    text-decoration: none;
+}
+
+.newsportal_adminpannel_maincontainer {
+    display: block;
+}
+
+
+/* css for topbar starts */
+
+.npap_header_container {
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    z-index: 3;
+    background-color: #2C2A2E;
+    display: flex;
+    border-bottom: solid 3px #15BBF8;
+}
+
+.npap_col1 {
+    width: 15%;
+    padding-top: 10px;
+}
+
+.npap_col2 {
+    width: 70%;
+}
+
+.npap_col3 {
+    width: 15%;
+    display: flex;
+    padding-top: 10px;
+}
+
+.npap_logo {
+    width: 57%;
+    height: 80%;
+    margin-left: 30px;
+}
+
+.npap_logo img {
+    width: 100%;
+    height: 100%;
+}
+
+.npap_nav_header_navbar {
+    width: 100%;
+    height: auto;
+}
+
+.npap_nav_header_navbar_list {
+    width: 100%;
+    height: auto;
+    padding-top: 18px;
+    display: flex;
+}
+
+.npap_list_dashboard {
+    width: 13%;
+    text-align: center;
+}
+
+.npap_list_nepalinews {
+    width: 13%;
+    text-align: center;
+}
+
+.npap_list_englishnews {
+    width: 13%;
+    text-align: center;
+}
+
+.npap_list_aboutus {
+    width: 13%;
+    text-align: center;
+}
+
+.npap_nav_header_navbar_list a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+.npap_active {
+    color: #15BBF8 !important;
+    font-weight: bold;
+    border-bottom: solid 5px #15BBF8;
+    padding-bottom: 10px;
+}
+
+.npap_bell {
+    width: 33.33%;
+}
+
+.npap_settings {
+    width: 33.33%;
+}
+
+.npap_profile {
+    width: 33.33%;
+}
+
+.npap_profile img {
+    width: 40%;
+    height: 80%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+/* css for topbar ends */
+
+.newsportal_adminpannel_subcontainer {
+    display: flex;
+    flex-direction: row-reverse;
+    height: 100%;
+    width: 100%;
+}
+
+
+/* css for sidebar starts */
+
+.ap_onclick_sidebar_bck {
+    margin-top: 53px;
+}
+
+.ap_onclick_sidebar_container {
+    background-color: #2c2a2e;
+    width: 12%;
+    height: 100%;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    overflow-x: hidden;
+    padding: 0.5% 1%;
+    border-right: 4px solid #15BBF8;
+}
+
+.ad_sidebar_btn {
+    display: grid;
+}
+
+.ad_sidebar_btn button,
+.ap_samachar_add_btn button {
+    background-color: #474747;
+    color: white;
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+}
+
+.ad_sidebar_btn span {
+    padding-left: 5%;
+    font-size: 1.2em;
+}
+
+.ad_sidebar_btn_content {
+    padding: 2% 3%;
+}
+
+.np_sidebar_btn_row {
+    display: flex;
+    width: 100%;
+}
+
+.np_sidebar_btn_col1 {
+    width: 90%;
+    padding: 4% 0%;
+}
+
+.np_sidebar_btn_col2 {
+    width: 10%;
+    padding: 6% 3%;
+}
+
+.ad_sidebar_btn button:hover {
+    background-color: #15BBF8;
+}
+
+button:hover {
+    color: black;
+}
+
+.np_sidebar_btn_col1 img {
+    object-fit: cover;
+}
+
+#hr {
+    border: 1.5px solid #15BBF8;
+}
+
+.ap_samachar_add_btn {
+    /* width:100%; */
+    text-align: center;
+    padding: 2% 3%;
+}
+
+.ap_samachar_add_btn img {
+    padding: 3% 5%;
+}
+
+
+/*css for side bar ends  */
+
+
+/* css for breaking news page starts */
+
+.np_ap_tableform_content {
+    width: 86%;
+    height: auto;
+    padding-top: 3.5%;
+}
+
+
+/* tableform first part css starts */
+
+.np_ap_tableform_content_fp {
+    display: flex;
+    width: 94%;
+    margin: 20px auto;
+}
+
+.np_ap_tf_left {
+    float: left;
+    width: 50%;
+    font-size: 22px;
+    padding: 8px 0px;
+    color: #2C2A2E;
+}
+
+.np_ap_tf_right {
+    text-align: right;
+    width: 50%;
+}
+
+.np_ap_tf_addbtn {
+    background-color: #15BBF8;
+    border: none;
+    color: white;
+    padding: 8px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+
+/* tableform first part css starts */
+
+
+/* tableform second part css starts */
+
+.np_ap_tableform_content_sp {
+    width: 94%;
+    margin: auto;
+}
+
+#np_ap_table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: auto;
+    border: solid 2px #393939;
+}
+
+th {
+    background-color: #393939;
+    color: #FFFFFF;
+    font-weight: normal;
+}
+
+#np_ap_sp_1 {
+    width: 3%;
+}
+
+#np_ap_sp_2 {
+    width: 20%;
+}
+
+#np_ap_sp_3 {
+    width: 8%;
+}
+
+#np_ap_sp_4 {
+    width: 12%;
+}
+
+#np_ap_sp_5 {
+    width: 12%;
+}
+
+#np_ap_sp_6 {
+    width: 8%;
+}
+
+#np_ap_sp_7 {
+    width: 17%;
+}
+
+tr {
+    border: none;
+    height: 35px;
+    font-size: 17px;
+    text-align: center;
+}
+
+td {
+    border-right: solid 2px #393939;
+    border-left: solid 2px #393939;
+    padding: 5px;
+    text-align: center;
+    font-size: 18px;
+    color: #2C2A2E;
+}
+
+.np_ap_viewbtn {
+    width: 76px;
+    height: 30px;
+    background-color: #15BBF8;
+    cursor: pointer;
+    padding: 5px 5px 5px 5px;
+    color: #ffffff;
+    border: 2px solid #15BBF8;
+    border-radius: 10px;
+    font-weight: 20;
+}
+
+.np_ap_deletebtn {
+    width: 76px;
+    height: 30px;
+    background-color: #C70505;
+    cursor: pointer;
+    padding: 5px 5px 5px 5px;
+    color: #ffffff;
+    border: 2px solid#C70505;
+    border-radius: 10px;
+    font-weight: 20;
+}
+
+
+/* tableform second part css ends */
+
+
+/* pagination css starts */
+
+.np_ap_tableform_pagination {
+    text-align: center;
+    margin: 40px auto;
+    width: 80%;
+}
+
+.np_ap_tableform_pagination a {
+    color: #707070;
+    text-align: center;
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    opacity: 0.8;
+}
+
+#pg_left {
+    font-size: 25px;
+}
+
+#pg_right {
+    font-size: 25px;
+}
+
+.np_ap_tableform_pagination a.active {
+    background-color: #FEC8C8;
+    color: #FF0000;
+    border-radius: 5px;
+}
+
+.np_ap_tableform_pagination a:hover:not(.active) {
+    background-color: #ddd;
+    border-radius: 5px;
+}
+
+
+/* pagination css ends */
+
+
+/* css for breaking news page ends */

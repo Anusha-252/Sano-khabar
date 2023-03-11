@@ -1,0 +1,459 @@
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    background-color: #F2F2F2;
+}
+
+a {
+    text-decoration: none;
+}
+
+.newsportal_adminpannel_maincontainer {
+    display: block;
+}
+
+
+/* css for topbar starts */
+
+.npap_header_container {
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    z-index: 3;
+    background-color: #2C2A2E;
+    display: flex;
+    border-bottom: solid 3px #15BBF8;
+}
+
+.npap_col1 {
+    width: 15%;
+    padding-top: 10px;
+}
+
+.npap_col2 {
+    width: 70%;
+}
+
+.npap_col3 {
+    width: 15%;
+    display: flex;
+    padding-top: 10px;
+}
+
+.npap_logo {
+    width: 57%;
+    height: 80%;
+    margin-left: 30px;
+}
+
+.npap_logo img {
+    width: 100%;
+    height: 100%;
+}
+
+.npap_nav_header_navbar {
+    width: 100%;
+    height: auto;
+}
+
+.npap_nav_header_navbar_list {
+    width: 100%;
+    height: auto;
+    padding-top: 18px;
+    display: flex;
+}
+
+.npap_list_dashboard {
+    width: 13%;
+    text-align: center;
+}
+
+.npap_list_nepalinews {
+    width: 13%;
+    text-align: center;
+}
+
+.npap_list_englishnews {
+    width: 13%;
+    text-align: center;
+}
+
+.npap_list_aboutus {
+    width: 13%;
+    text-align: center;
+}
+
+.npap_nav_header_navbar_list a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+.npap_active {
+    color: #15BBF8 !important;
+    font-weight: bold;
+    border-bottom: solid 5px #15BBF8;
+    padding-bottom: 10px;
+}
+
+.npap_bell {
+    width: 33.33%;
+}
+
+.npap_settings {
+    width: 33.33%;
+}
+
+.npap_profile {
+    width: 33.33%;
+}
+
+.npap_profile img {
+    width: 40%;
+    height: 80%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+/* css for topbar ends */
+
+.newsportal_adminpannel_subcontainer {
+    display: flex;
+    flex-direction: row-reverse;
+    height: auto;
+    width: 100%;
+}
+
+
+/* css for sidebar starts */
+
+.ap_onclick_sidebar_bck {
+    margin-top: 53px;
+}
+
+.ap_onclick_sidebar_bck {
+    background-color: #2c2a2e;
+    width: 12%;
+    height: 100%;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    overflow-x: hidden;
+    padding: 0.5% 1%;
+    border-right: 4px solid #15BBF8;
+}
+
+.ad_sidebar_btn {
+    display: grid;
+}
+
+.ad_sidebar_btn button,
+.ap_samachar_add_btn button {
+    background-color: #474747;
+    color: white;
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+}
+
+.ad_sidebar_btn span {
+    padding-left: 5%;
+    font-size: 1.2em;
+}
+
+.ad_sidebar_btn_content {
+    padding: 2% 3%;
+}
+
+.np_sidebar_btn_row {
+    display: flex;
+    width: 100%;
+}
+
+.np_sidebar_btn_col1 {
+    width: 90%;
+    padding: 4% 0%;
+}
+
+.np_sidebar_btn_col2 {
+    width: 10%;
+    padding: 6% 3%;
+}
+
+.ad_sidebar_btn button:hover {
+    background-color: #15BBF8;
+}
+
+button:hover {
+    color: black;
+}
+
+.np_sidebar_btn_col1 img {
+    object-fit: cover;
+}
+
+#hr {
+    border: 1.5px solid #15BBF8;
+}
+
+.ap_samachar_add_btn {
+    /* width:100%; */
+    text-align: center;
+    padding: 2% 3%;
+}
+
+.ap_samachar_add_btn img {
+    padding: 3% 5%;
+}
+
+
+/*css for side bar ends  */
+
+
+/* css for mainbody page starts */
+
+.np_ap_add_ntc_container {
+    width: 85%;
+    margin-top: 72px;
+    left: 20px;
+    position: relative;
+}
+
+
+/* css for mainbody page starts */
+
+.np_ap_add_ntc_container {
+    width: 85%;
+    left: 20px;
+    position: relative;
+}
+.np_ap_ntc_landing_layout{
+    width: 98%;
+    height:170px;
+}
+.np_ap_ntc_landing_layout_items{
+font-size:medium;
+border:2px solid black;
+}
+.np_ap_ntc_landing_layout_items:hover{
+border:2px solid #15BBF8;
+}
+/* heading form css starts */
+
+.np_ap_add_ntc_form {
+    width: 95%;
+    margin: 10px auto;
+}
+
+.ntc_f_div {
+    display: flex;
+}
+
+.np_ap_ntc_fname {
+    width: 10%;
+    padding: 20px 0px;
+}
+
+.np_ap_ntc_ftext {
+    width: 90%;
+}
+
+.np_ap_ntc_ftext input[type=text],
+select {
+    width: 32%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: white;
+    border: none;
+}
+
+.ntc_thumbnails_div {
+    display: flex;
+}
+
+.np_ap_ntc_thumb_name {
+    width: 10%;
+    padding: 20px 0px;
+}
+
+.np_ap_ntc_thumb_text {
+    width: 50%;
+    padding: 15px 0px;
+}
+
+.np_ap_ntc_thumb_text input[type="file"] {
+    display: none;
+}
+
+.ntc_upload_button {
+    width: 54%;
+    height: 24px;
+    background-color: white;
+    cursor: pointer;
+    padding: 5px 5px 5px 5px;
+    border: 2px solid #d4cccc;
+    margin-left:10px;
+
+    border-radius: 5px;
+    font-weight: 20;
+    text-align: center;
+}
+.img_upload{
+display:flex;
+}
+.ntc_upload_image_display{
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-left:30px;
+}
+.ntc_upload_image_display img{
+width:100px;
+height:100px;
+
+}
+ 
+
+/* heading form css ends */
+
+
+/* landing form css starts */
+
+.np_ap_ntc_landing {
+    display: flex;
+}
+.np_ap_ntc_lp_select{
+width:20%;
+margin-left:10px;
+font-size:large;
+border:1px solid black;
+}
+.np_ap_ntc_lp_select:hover{
+border:2px solid #15BBF8;
+}
+
+.np_ap_ntc_lname {
+    width: 40%;
+    padding: 15px 0px 15px 0px;
+}
+
+.np_ap_ntc_lbutton {
+    width: 85%;
+    padding: 15px 0px;
+}
+
+.ntc_landing_btn {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #15BBF8;
+}
+
+
+/* landingpage layout css starts */
+
+.np_ap_ntc_landing_page {
+    width: 90%;
+
+    border: 2px solid #15BBF8;
+    height: 290px;
+    border-radius: 8px;
+    background-color: white;
+}
+
+.np_ap_ntc_landing_page h6 {
+    font-weight: normal;
+    margin: 0px;
+    padding: 0px;
+    font-size: 15px;
+    padding: 15px 0px 5px 25px;
+}
+
+.np_ap_ntc_landing_page_img {
+    display: flex;
+    width: 99%;
+    margin: 0px auto;
+}
+
+.np_ap_lp_layout {
+    height: 100%;
+    width: 25%;
+    margin: 20px 25px 0px 35px;
+    border-radius: 5px;
+}
+.np_ap_ntc_lp_img1 {
+    height: 66%;
+    width: 100%;
+    border-radius: 5px;
+}
+.np_ap_lp_layout1_p {
+    height: 10%;
+    background-color: #F2F2F2;
+    margin: 10px;
+    text-align: center;
+}
+.np_ap_lp_layout1_p p{
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+ }
+
+.np_ap_ntc_lp_img1 img {
+
+    height: 100%;
+    width: 100%;
+
+}
+
+/* landingpage layout css ends */
+
+
+/* landingpage layout css ends */
+
+
+/* save button starts */
+
+.np_ap_ntc_save_btn {
+    width: 95%;
+    margin: 20px 0px;
+}
+
+.ntc_sbtn {
+    width: 18%;
+    height: 35px;
+    background-color: #15BBF8;
+    cursor: pointer;
+    padding: 5px 5px 5px 5px;
+    color: white;
+    border: 1px solid#15BBF8;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+/* save button ends */
+
+
+/* landing form css ends  */
+
+
+/* pop up */
+
+#form1 {
+    display: none;
+}
+
+.form2 {
+    display: block !important;
+}
+
+
+/* css for mainbody page ends */

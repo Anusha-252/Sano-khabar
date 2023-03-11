@@ -1,0 +1,60 @@
+<div class="np_listnews_maincontainer">
+  <div class="np_newsportal_content">
+    <!-- heading -->
+    <div class="np_hnews_heading">
+      <span>{{category_query1.name}}</span>
+      <hr color="red" noshade />
+    </div>
+    <!-- first news container -->
+    {% for i in category_news_query %}
+    <div class="np_ar_news_container">
+      <a href="{% url 'nepali_per_page' i.id %}">
+        <div class="np_ar_news_imagepart">
+          <img src="{{i.photo_img.url}}" alt="" />
+        </div>
+        <!-- html code for the description part starts here -->
+        <div class="np_ar_news_description">
+          <!-- <div class="np_ar_news_description_wrapper"> -->
+          <div class="np_ar_news_description_mhead">
+            <h2>{{i.title}}</h2>
+          </div>
+          <div class="np_ar_news_description_mnews">
+            <p>{{i.news_summary}}</p>
+          </div>
+          <div class="np_ar_news_description_lr">
+            <div class="np_ar_news_description_lr_time">
+              <i class="far fa-clock" style="font-size: 17px"></i>
+              <p>{{i.time_uploaded}}</p>
+            </div>
+            <div class="np_ar_news_description_lr_ac">
+              <a href="{% url 'nepali_per_page' i.id %}">थप हेर्नुहोस</a>
+            </div>
+          </div>
+          <!-- </div> -->
+        </div>
+        <!-- html code for the description part ends here -->
+      </a>
+    </div>
+    {% endfor %}
+
+    <!-- pagination html -->
+    <div class="np_ar_news_pagination">
+      {% if category_news_query.has_previous %}
+      <a href="?page_news_object=1">&laquo;</a>
+      <a href="?page_news_object={{category_news_query.previous_page_number}}"
+        >&lt;</a
+      >
+      {% endif %}
+      <a class="active">{{category_news_query.number}}</a>
+      {% if category_news_query.has_next %}
+      <a href="?page_news_object={{category_news_query.next_page_number}}"
+        >&gt;</a
+      >
+      <a href="?page_news_object={{category_news_query.paginator.num_pages}}"
+        >&raquo;</a
+      >
+      {% endif %}
+    </div>
+  </div>
+  {% include 'ads4_list.html' %}
+</div>

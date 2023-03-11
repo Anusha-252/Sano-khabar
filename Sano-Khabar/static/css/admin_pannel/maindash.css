@@ -1,0 +1,244 @@
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    background-color: #F2F2F2;
+}
+
+a {
+    text-decoration: none;
+}
+
+.newsportal_adminpannel_maincontainer {
+    display: block;
+}
+
+
+/* css for topbar starts */
+
+.npap_header_container {
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    z-index: 3;
+    background-color: #2C2A2E;
+    display: flex;
+    border-bottom: solid 3px #15BBF8;
+}
+
+.npap_col1 {
+    width: 15%;
+    padding-top: 10px;
+}
+
+.npap_col2 {
+    width: 70%;
+}
+
+.npap_col3 {
+    width: 15%;
+    display: flex;
+    padding-top: 10px;
+}
+
+.npap_logo {
+    width: 57%;
+    height: 80%;
+    margin-left: 30px;
+}
+
+.npap_logo img {
+    width: 100%;
+    height: 100%;
+}
+
+.npap_nav_header_navbar {
+    width: 100%;
+    height: auto;
+}
+
+.npap_nav_header_navbar_list {
+    width: 100%;
+    height: auto;
+    padding-top: 18px;
+    display: flex;
+}
+
+.npap_list_dashboard {
+    width: 13%;
+    text-align: center;
+}
+
+.npap_list_nepalinews {
+    width: 13%;
+    text-align: center;
+}
+
+.npap_list_englishnews {
+    width: 13%;
+    text-align: center;
+}
+
+.npap_list_aboutus {
+    width: 13%;
+    text-align: center;
+}
+
+.npap_nav_header_navbar_list a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+.npap_active {
+    color: #15BBF8 !important;
+    font-weight: bold;
+    border-bottom: solid 5px #15BBF8;
+    padding-bottom: 10px;
+}
+
+.npap_bell {
+    width: 33.33%;
+}
+
+.npap_settings {
+    width: 33.33%;
+}
+
+.npap_profile {
+    width: 33.33%;
+}
+
+.npap_profile img {
+    width: 40%;
+    height: 80%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+/* css for topbar ends */
+
+
+/* css for dashboard starts */
+
+.npap_dashboard_container {
+    width: 100%;
+    height: 110px;
+    background-color: #F2F2F2;
+    display: flex;
+}
+
+.npap_header_maincontent{
+padding-top:55px;
+}
+
+.npap_dashboardleft {
+    width: 82%;
+    background-color: white;
+    border-radius: 25px;
+    margin: 10px 10px 10px 25px;
+}
+
+.npap_dashboardleft h1 {
+    margin-left: 27px;
+    margin-block-start: 0.3em;
+    margin-block-end: 0.3em;
+}
+
+.npap_dashboardleft p {
+    margin-left: 27px;
+    margin-block-start: 0.4em;
+    margin-block-end: 0.4em;
+    font-size: 18px;
+}
+
+.npap_dashboardright {
+    width: 18%;
+    background-color: white;
+    border-radius: 25px;
+    margin: 10px 25px 10px 10px;
+    display: flex;
+}
+
+.npap_dashboard_profile {
+    width: 30%;
+    padding: 12px 0px 12px 12px;
+}
+
+.npap_dashboard_profile img {
+    width: 85%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.npap_dashboard_text {
+    width: 70%;
+    padding-top: 15px;
+}
+
+.npap_dashboard_text p {
+    margin-left: 5px;
+    margin-block-start: 0.4em;
+    margin-block-end: 0.2em;
+    font-size: 18px;
+}
+
+.npap_dashboard_text span {
+    margin-left: 5px;
+    font-size: 15px;
+}
+
+
+/* css for dashboard ends */
+
+
+/* css for box with img starts */
+
+.npap_boxandimg {
+    height: auto;
+    width: 65%;
+    background-color: #F2F2F2;
+    display: flex;
+    margin: 70px auto;
+}
+
+.npap_eachbox {
+    height: 250px;
+    width: 220px;
+    text-align: center;
+    border-radius: 20px;
+    margin: 0px 10px;
+}
+
+.npap_imagepart {
+    height: 77%;
+    background-color: white;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.npap_textpart {
+    height: 23%;
+    color: white;
+    font-weight: bolder;
+    font-size: larger;
+    background-color: #15BBF8;
+    border-radius: 0px 0px 20px 20px;
+}
+
+.npap_imagepart img {
+    width: 60%;
+    height: 60%;
+    margin-top: 45px;
+    object-fit: contain;
+}
+
+.npap_textpart p {
+    padding-top: 19px;
+    margin-block-start: 0em;
+}
+
+
+/* css for box with img ends */

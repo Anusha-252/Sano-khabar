@@ -1,0 +1,29 @@
+{% load static %}
+{% load mathfilters %}
+{% include 'ads1_heading.html' %}
+<div class="np_n3_container">
+    <div class="np_n3_content">
+        <div class="np_n3_heading">
+            <span>{{section3_name.name}}</span>
+            <hr>
+        </div>
+        <div class="np_n3_news3">
+            {% for i in section3_display %}
+            <a href="{% url 'nepali_per_page' i.id %}">
+                <div class="np_n3_newsitem">
+                    <div class="np_n3_image">
+                        <img src={{i.photo_img.url}} alt="">
+                    </div>
+                    <div class="np_n3_text">
+                        <h4>{{i.title}}</h4>
+                    </div>
+                    <div class="np_n3_footer">
+                        <i class="fa fa-clock"></i>
+                        <p>{{i.date_uploaded}}</p>
+                    </div>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    {% include 'meta.html' %}
+
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="{% static 'fontawesome-free-6.0.0-beta3-web/css/all.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/mukhyasamachar.css'  %}"/>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+    <script src="{% static 'js/main.js' %}"></script>
+
+    <title>News Portal</title>
+</head>
+<body>
+{% include 'header001.html' %}
+{% include 'main_heading_news.html' %}
+{%include 'mukhyasamachar.html' %}
+{% include 'artha.html' %}
+{% include 'manoranjan.html' %}
+{% include 'video_pannel.html' %}
+{% include 'footer.html' %}
+</body>
+</html>

@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="{% static 'css/admin_pannel/ad_list_page.css' %}"/>
+    <link rel="stylesheet" href="{% static 'fontawesome-free-6.0.0-beta3-web/css/all.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/admin_pannel/navbar.css' %}">
+      <link rel="stylesheet" href="{% static 'css/admin_pannel/sidebar.css' %}" />
+    <title>Ads</title>
+    <script src="{% static 'js/admin_pannel.js' %}"></script>
+</head>
+
+<body>
+<div class="newsportal_adminpannel_maincontainer">
+    {% include 'admin_pannel/admin_panel_navbar.html' %}
+    <div class="newsportal_adminpannel_subcontainer">
+         {% include 'admin_pannel/sidebar.html' with title_pager=title_high %}
+        <!-- mainbody starts -->
+        <div class="np_ap_tableform_content">
+            <!-- tableform firstpart starts-->
+            <div class="np_ap_tableform_content_fp">
+                <div class="np_ap_tf_left">Ads</div>
+                <div class="np_ap_tf_right">
+                    <a href="{% url 'add_adds' %}" class="np_ap_tf_addbtn">Add Ads</a> 
+                </div>
+            </div>
+            <!-- tableform firstpart ends-->
+
+            <!-- tableform secondpart starts-->
+            <div class="np_ap_tableform_content_sp">
+                <table id="np_ap_table">
+                    <tr>
+                        <th id="np_ap_ad_1">Ads_Num</th>
+                        <th id="np_ap_ad_2">Title</th>
+                        {% comment %} <th id="np_ap_ad_3">Image</th> {% endcomment %}
+                        <th id="np_ap_ad_4">Action</th>
+                        {% comment %} <th id="np_ap_ad_5">Date</th>
+                        <th id="np_ap_ad_6">Action</th> {% endcomment %}
+                    </tr>
+                    <tr>
+                        <td>001</td>
+                        <td>
+                            {% if ads_query_001.title %}
+                                {{ads_query_001.title}}
+                            {% else %}
+                                No News
+                            {% endif %}
+                        {% comment %} </td>
+                        <td> {% endcomment %}
+                            <td>
+                                {% if ads_query_001.title %}
+                                     {% comment %} <a href="{% url 'edit_ads' ads_query.id  %}" class="ns_ad_add_ad">Edit</a>         <!-- this is activated if ad is already uploaded -->  {% endcomment %}
+                                     <a href="edit_ads/001" class="np_ap_viewbtn">Edit</a> 
+
+                                    <a href="delete_ads/001" class="np_ap_deletebtn">Delete</a>
+                                {% else %}
+                                    <span>-----</span>
+                                {% endif %}
+                            </td>
+                                             </td>
+                    </tr>
+                    <tr>
+                        <td>002</td>
+                        <td>
+                            {% if ads_query_002.title %}
+                                {{ads_query_002.title}}
+                            {% else %}
+                                No News
+                            {% endif %}
+                        {% comment %} </td>
+                        <td> {% endcomment %}
+                            <td>
+                                {% if ads_query_002.title %}
+                                    <a href="edit_ads/002" class="np_ap_viewbtn">Edit</a>         <!-- this is activated if ad is already uploaded -->
+                                    <a href="delete_ads/002" class="np_ap_deletebtn">Delete</a>
+                                {% else %}
+                                <span>-----</span>
+
+                                {% endif %}
+                            </td>
+                                             </td>
+                    </tr>
+                    <tr>
+                        <td>003</td>
+                        <td>
+                            {% if ads_query_003.title %}
+                                {{ads_query_003.title}}
+                            {% else %}
+                                No News
+                            {% endif %}
+                        {% comment %} </td>
+                        <td> {% endcomment %}
+                            <td>
+                                {% if ads_query_003.title %}
+                                    <a href="edit_ads/003" class="np_ap_viewbtn">Edit</a>         <!-- this is activated if ad is already uploaded -->
+                                    <a href="delete_ads/003" class="np_ap_deletebtn">Delete</a>
+                                {% else %}
+                                <span>-----</span>
+                                {% endif %}
+                            </td>
+                                             </td>
+                    </tr>
+                    <tr>
+                        <td>004</td>
+                        <td>
+                            {% if ads_query_004.title %}
+                                {{ads_query_004.title}}
+                            {% else %}
+                                No News
+                            {% endif %}
+                        {% comment %} </td>
+                        <td> {% endcomment %}
+                            <td>
+                                {% if ads_query_004.title %}
+                                    <a href="edit_ads/004" class="np_ap_viewbtn">Edit</a>         <!-- this is activated if ad is already uploaded -->
+                                    <a href="delete_ads/004" class="np_ap_deletebtn">Delete</a>
+                                {% else %}
+                                <span>-----</span>
+                                {% endif %}
+                            </td>
+                                             </td>
+                    </tr>
+                    <tr>
+                        <td>005</td>
+                        <td>
+                            {% if ads_query_005.title %}
+                                {{ads_query_005.title}}
+                            {% else %}
+                                No News
+                            {% endif %}
+                        {% comment %} </td>
+                        <td> {% endcomment %}
+                            <td>
+                                {% if ads_query_005.title %}
+                                    <a href="edit_ads/005" class="np_ap_viewbtn">Edit</a>         <!-- this is activated if ad is already uploaded -->
+                                    <a href="delete_ads/005" class="np_ap_deletebtn">Delete</a>
+                                {% else %}
+                                <span>-----</span>
+                                {% endif %}
+                            </td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>006</td>
+                        <td>
+                            {% if ads_query_006.title %}
+                                {{ads_query_006.title}}
+                            {% else %}
+                                No News
+                            {% endif %}
+                        {% comment %} </td>
+                        <td> {% endcomment %}
+                            <td>
+                                {% if ads_query_006.title %}
+                                    <a href="edit_ads/006" class="np_ap_viewbtn">Edit</a>         <!-- this is activated if ad is already uploaded -->
+                                    <a href="delete_ads/006" class="np_ap_deletebtn">Delete</a>
+                                {% else %}
+                                <span>-----</span>
+                                {% endif %}
+                            </td>
+                                             </td>
+                    </tr>
+
+                    <tr>
+                        <td>007</td>
+                        <td>
+                            {% if ads_query_007.title %}
+                                {{ads_query_007.title}}
+                            {% else %}
+                                No News
+                            {% endif %}
+                        {% comment %} </td>
+                        <td> {% endcomment %}
+                            <td>
+                                {% if ads_query_007.title %}
+                                    <a href="edit_ads/007" class="np_ap_viewbtn">Edit</a>         <!-- this is activated if ad is already uploaded -->
+                                    <a href="delete_ads/007" class="np_ap_deletebtn">Delete</a>
+                                {% else %}
+                                <span>-----</span>
+                                {% endif %}
+                            </td>
+                                             </td>
+                    </tr>
+                    <tr>
+                        <td>008</td>
+                        <td>
+                            {% if ads_query_008.title %}
+                                {{ads_query_008.title}}
+                            {% else %}
+                                No News
+                            {% endif %}
+                        {% comment %} </td>
+                        <td> {% endcomment %}
+                            <td>
+                                {% if ads_query_008.title %}
+                                    <a href="edit_ads/008" class="np_ap_viewbtn">Edit</a>         <!-- this is activated if ad is already uploaded -->
+                                    <a href="delete_ads/008" class="np_ap_deletebtn">Delete</a>
+                                {% else %}
+                                <span>-----</span>
+                                {% endif %}
+                            </td>
+                                             </td>
+                    </tr>
+                    <tr>
+                        <td>009</td>
+                        <td>
+                            {% if ads_query_009.title %}
+                                {{ads_query_009.title}}
+                            {% else %}
+                                No News
+                            {% endif %}
+                        {% comment %} </td>
+                        <td> {% endcomment %}
+                            <td>
+                                {% if ads_query_009.title %}
+                                    <a href="edit_ads/009" class="np_ap_viewbtn">Edit</a>         <!-- this is activated if ad is already uploaded -->
+                                    <a href="delete_ads/009" class="np_ap_deletebtn">Delete</a>
+                                {% else %}
+                                <span>-----</span>
+                                {% endif %}
+                            </td>
+                                             </td>
+                    </tr>
+                    <tr>
+                        <td>010</td>
+                        <td>
+                            {% if ads_query_010.title %}
+                                {{ads_query_010.title}}
+                            {% else %}
+                                No News
+                            {% endif %}
+                        {% comment %} </td>
+                        <td> {% endcomment %}
+                            <td>
+                                {% if ads_query_010.title %}
+                                    <a href="edit_ads/010" class="np_ap_viewbtn">Edit</a>         <!-- this is activated if ad is already uploaded -->
+                                    <a href="delete_ads/010" class="np_ap_deletebtn">Delete</a>
+                                {% else %}
+                                <span>-----</span>
+                                {% endif %}
+                            </td>
+                                             </td>
+                    </tr>
+                    <tr>
+                        <td>011</td>
+                        <td>
+                            {% if ads_query_011.title %}
+                                {{ads_query_011.title}}
+                            {% else %}
+                                No News
+                            {% endif %}
+                        {% comment %} </td>
+                        <td> {% endcomment %}
+                            <td>
+                                {% if ads_query_011.title %}
+                                    <a href="edit_ads/011" class="np_ap_viewbtn">Edit</a>         <!-- this is activated if ad is already uploaded -->
+                                    <a href="delete_ads/011" class="np_ap_deletebtn">Delete</a>
+                                {% else %}
+                                <span>-----</span>
+                                {% endif %}
+                            </td>
+                                             </td>
+                    </tr>
+                    <tr>
+                        <td>012</td>
+                        <td>
+                            {% if ads_query_012.title %}
+                                {{ads_query_012.title}}
+                            {% else %}
+                                No News
+                            {% endif %}
+                        {% comment %} </td>
+                        <td> {% endcomment %}
+                            <td>
+                                {% if ads_query_012.title %}
+                                    <a href="edit_ads/012" class="np_ap_viewbtn">Edit</a>         <!-- this is activated if ad is already uploaded -->
+                                    <a href="delete_ads/012" class="np_ap_deletebtn">Delete</a>
+                                {% else %}
+                                <span>-----</span>
+                                {% endif %}
+                            </td>
+                                             </td>
+                    </tr>
+                    <tr>
+                        <td>013</td>
+                        <td>
+                            {% if ads_query_013.title %}
+                                {{ads_query_013.title}}
+                            {% else %}
+                                No News
+                            {% endif %}
+                        {% comment %} </td>
+                        <td> {% endcomment %}
+                            <td>
+                                {% if ads_query_013.title %}
+                                    <a href="edit_ads/013" class="np_ap_viewbtn">Edit</a>         <!-- this is activated if ad is already uploaded -->
+                                    <a href="delete_ads/013" class="np_ap_deletebtn">Delete</a>
+                                {% else %}
+                                <span>-----</span>
+                                {% endif %}
+                            </td>
+                                             </td>
+                    </tr>
+                    <tr>
+                        <td>014</td>
+                        <td>
+                            {% if ads_query_014.title %}
+                                {{ads_query_014.title}}
+                            {% else %}
+                                No News
+                            {% endif %}
+                        {% comment %} </td>
+                        <td> {% endcomment %}
+                            <td>
+                                {% if ads_query_014.title %}
+                                    <a href="edit_ads/014" class="np_ap_viewbtn">Edit</a>         <!-- this is activated if ad is already uploaded -->
+                                    <a href="delete_ads/014" class="np_ap_deletebtn">Delete</a>
+                                {% else %}
+                                <span>-----</span>
+                                {% endif %}
+                            </td>
+                                             </td>
+                    </tr>
+                    <tr>
+                        <td>015</td>
+                        <td>
+                            {% if ads_query_015.title %}
+                                {{ads_query_015.title}}
+                            {% else %}
+                                No News
+                            {% endif %}
+                        {% comment %} </td>
+                        <td> {% endcomment %}
+                            <td>
+                                {% if ads_query_015.title %}
+                                    <a href="edit_ads/015" class="np_ap_viewbtn">Edit</a>         <!-- this is activated if ad is already uploaded -->
+                                    <a href="delete_ads/015" class="np_ap_deletebtn">Delete</a>
+                                {% else %}
+                                <span>-----</span>
+                                {% endif %}
+                            </td>
+                                             </td>
+                    </tr>
+                    <tr>
+                        <td>016</td>
+                        <td>
+                            {% if ads_query_016.title %}
+                                {{ads_query_016.title}}
+                            {% else %}
+                                No News
+                            {% endif %}
+                        {% comment %} </td>
+                        <td> {% endcomment %}
+                            <td>
+                                {% if ads_query_016.title %}
+                                    <a href="edit_ads/016" class="np_ap_viewbtn">Edit</a>         <!-- this is activated if ad is already uploaded -->
+                                    <a href="delete_ads/016" class="np_ap_deletebtn">Delete</a>
+                                {% else %}
+                                <span>-----</span>
+                                {% endif %}
+                            </td>
+                                             </td>
+                    </tr>
+                    <tr>
+                        <td>017</td>
+                        <td>
+                            {% if ads_query_017.title %}
+                                {{ads_query_017.title}}
+                            {% else %}
+                                No News
+                            {% endif %}
+                        {% comment %} </td>
+                        <td> {% endcomment %}
+                            <td>
+                                {% if ads_query_017.title %}
+                                    <a href="edit_ads/017" class="np_ap_viewbtn">Edit</a>         <!-- this is activated if ad is already uploaded -->
+                                    <a href="delete_ads/017" class="np_ap_deletebtn">Delete</a>
+                                {% else %}
+                                <span>-----</span>
+                                {% endif %}
+                            </td>
+                                             </td>
+                    </tr>
+                    <tr>
+                        <td>018</td>
+                        <td>
+                            {% if ads_query_018.title %}
+                                {{ads_query_018.title}}
+                            {% else %}
+                                No News
+                            {% endif %}
+                        {% comment %} </td>
+                        <td> {% endcomment %}
+                            <td>
+                                {% if ads_query_018.title %}
+                                    <a href="edit_ads/018" class="np_ap_viewbtn">Edit</a>         <!-- this is activated if ad is already uploaded -->
+                                    <a href="delete_ads/018" class="np_ap_deletebtn">Delete</a>
+                                {% else %}
+                                <span>-----</span>
+                                {% endif %}
+                            </td>
+                                             </td>
+                    </tr>
+                    <tr>
+                        <td>019</td>
+                        <td>
+                            {% if ads_query_019.title %}
+                                {{ads_query_019.title}}
+                            {% else %}
+                                No News
+                            {% endif %}
+                        {% comment %} </td>
+                        <td> {% endcomment %}
+                            <td>
+                                {% if ads_query_019.title %}
+                                    <a href="edit_ads/019" class="np_ap_viewbtn">Edit</a>         <!-- this is activated if ad is already uploaded -->
+                                    <a href="delete_ads/019" class="np_ap_deletebtn">Delete</a>
+                                {% else %}
+                                <span>-----</span>
+                                {% endif %}
+                            </td>
+                                             </td>
+                    </tr>
+                    <tr>
+                        <td>020</td>
+                        <td>
+                            {% if ads_query_020.title %}
+                                {{ads_query_020.title}}
+                            {% else %}
+                                No News
+                            {% endif %}
+                        {% comment %} </td>
+                        <td> {% endcomment %}
+                            <td>
+                                {% if ads_query_020.title %}
+                                    <a href="edit_ads/020" class="np_ap_viewbtn">Edit</a>         <!-- this is activated if ad is already uploaded -->
+                                    <a href="delete_ads/020" class="np_ap_deletebtn">Delete</a>
+                                {% else %}
+                                <span>-----</span>
+                                {% endif %}
+                            </td>
+                                             </td>
+                    </tr>
+                    <tr>
+                        <td>021</td>
+                        <td>
+                            {% if ads_query_021.title %}
+                                {{ads_query_021.title}}
+                            {% else %}
+                                No News
+                            {% endif %}
+                        {% comment %} </td>
+                        <td> {% endcomment %}
+                            <td>
+                                {% if ads_query_021.title %}
+                                    <a href="edit_ads/021" class="np_ap_viewbtn">Edit</a>         <!-- this is activated if ad is already uploaded -->
+                                    <a href="delete_ads/021" class="np_ap_deletebtn">Delete</a>
+                                {% else %}
+                                <span>-----</span>
+                                {% endif %}
+                            </td>
+                                             </td>
+                    </tr>
+                    <tr>
+                        <td>022</td>
+                        <td>
+                            {% if ads_query_022.title %}
+                                {{ads_query_022.title}}
+                            {% else %}
+                                No News
+                            {% endif %}
+                        {% comment %} </td>
+                        <td> {% endcomment %}
+                            <td>
+                                {% if ads_query_022.title %}
+                                    <a href="edit_ads/022" class="np_ap_viewbtn">Edit</a>         <!-- this is activated if ad is already uploaded -->
+                                    <a href="delete_ads/022" class="np_ap_deletebtn">Delete</a>
+                                {% else %}
+                                <span>-----</span>
+                                {% endif %}
+                            </td>
+                                             </td>
+                    </tr>
+                    <tr>
+                        <td>023</td>
+                        <td>
+                            {% if ads_query_023.title %}
+                                {{ads_query_023.title}}
+                            {% else %}
+                                No News
+                            {% endif %}
+                        {% comment %} </td>
+                        <td> {% endcomment %}
+                            <td>
+                                {% if ads_query_023.title %}
+                                    <a href="edit_ads/023" class="np_ap_viewbtn">Edit</a>         <!-- this is activated if ad is already uploaded -->
+                                    <a href="delete_ads/023" class="np_ap_deletebtn">Delete</a>
+                                {% else %}
+                                <span>-----</span>
+                                {% endif %}
+                            </td>
+                                             </td>
+                    </tr>
+                    <tr>
+                        <td>024</td>
+                        <td>
+                            {% if ads_query_024.title %}
+                                {{ads_query_024.title}}
+                            {% else %}
+                                No News
+                            {% endif %}
+                        {% comment %} </td>
+                        <td> {% endcomment %}
+                            <td>
+                                {% if ads_query_024.title %}
+                                    <a href="edit_ads/024" class="np_ap_viewbtn">Edit</a>         <!-- this is activated if ad is already uploaded -->
+                                    <a href="delete_ads/024" class="np_ap_deletebtn">Delete</a>
+                                {% else %}
+                                <span>-----</span>
+                                {% endif %}
+                            </td>
+                                             </td>
+                    </tr>
+                    
+                   </table>
+            </div>
+            <!-- tableform secondpart ends-->
+            <!-- tablform pagination starts -->
+        </div>
+        <!-- mainbody ends -->
+    </div>
+</div>
+</body>
+</html>

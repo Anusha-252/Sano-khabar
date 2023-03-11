@@ -1,0 +1,24 @@
+{% load static %}
+<div class="np_vp_container">
+  <div class="np_vp_content">
+    <div class="np_vp_heading">
+      <span>भिडियो</span>
+      <hr />
+    </div>
+    <div class="np_vp_videocontainer owl-carousel" id="company_list">
+      {% for i in youtube_link_query %}
+      <div class="np_vp_videolink">
+        <iframe
+          src="{{i.link}}"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<script src="{% static 'js/main.js' %}"></script>

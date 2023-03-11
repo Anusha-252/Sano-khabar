@@ -1,0 +1,170 @@
+{% load static %} {% load mptt_tags %}
+
+<!-- sidebar starts -->
+<div class="ap_onclick_sidebar_bck">
+    <div class="ap_onclick_sidebar_container">
+        <div class="ad_sidebar_btn">
+            <!-- first btn-->
+            <a href="layout page.html">
+                <div class="ad_sidebar_btn_content">
+                    <a href="{% url 'ap_layout_page' %}">
+                        {% if title_pager == "Layout" %}
+                        <button class="active_sc">
+                            {% else %}
+                            <button>
+                                {% endif %}
+                                <div class="np_sidebar_btn_row">
+                                    <div class="np_sidebar_btn_col1">
+                                        <i class="fa-solid fa-l" style="font-size: 15px"></i>
+                                        <span id="bkn1">Layout</span>
+                                    </div>
+                                    <div class="np_sidebar_btn_col2">
+                                        <img src="{% static 'media\image\icons8-expand-arrow-100.png' %}" alt="">
+                                    </div>
+                                </div>
+                            </button>
+                        </button>
+                    </a>
+                </div>
+            </a>
+            <!-- second button -->
+            <a href="{% url 'ap_breaking_news_listpage' %}">
+                <div class="ad_sidebar_btn_content">
+                    {% if title_pager == "Breaking" %}
+                    <button class="active_sc">
+                        {% else %}
+                        <button>
+                            {% endif %}
+                            <div class="np_sidebar_btn_row">
+                                <div class="np_sidebar_btn_col1">
+                                    <i class="fa-brands fa-hotjar" style="font-size: 15px"></i>
+                                    <span id="bkn2">Breaking News</span>
+                                </div>
+                                <div class="np_sidebar_btn_col2">
+                                    <img src="{% static 'media\image\icons8-expand-arrow-100.png' %}" alt="">
+                                </div>
+                            </div>
+                        </button>
+                    </button>
+                </div>
+            </a>
+            <!-- third button -->
+            <a href="{% url 'ap_main_news_page' %}">
+                <div class="ad_sidebar_btn_content">
+                    {% if title_pager == "Main_News" %}
+                    <button class="active_sc">
+                        {% else %}
+                        <button>
+                            {% endif %}
+                            <div class="np_sidebar_btn_row">
+                                <div class="np_sidebar_btn_col1">
+                                    <i class="fa-solid fa-m" style="font-size: 15px"></i>
+                                    <span id="bkn3">Main News</span>
+                                </div>
+                                <div class="np_sidebar_btn_col2">
+                                    <img src="{% static 'media\image\icons8-expand-arrow-100.png' %}" alt="">
+                                </div>
+                            </div>
+                        </button>
+                    </button>
+                </div>
+            </a>
+            <!-- fourth button -->
+            <a href="{% url 'ap_latest_news_page' %}">
+                <div class="ad_sidebar_btn_content">
+                    {% if title_pager == "Latest_News" %}
+                    <button class="active_sc">
+                        {% else %}
+                        <button>
+                            {% endif %}
+                            <div class="np_sidebar_btn_row">
+                                <div class="np_sidebar_btn_col1">
+                                    <i class="fa-solid fa-file-lines" style="font-size: 15px"></i>
+                                    <span id="bkn4">Latest News</span>
+                                </div>
+                                <div class="np_sidebar_btn_col2">
+                                    <img src="{% static 'media\image\icons8-expand-arrow-100.png' %}" alt="">
+                                </div>
+                            </div>
+                        </button>
+                    </button>
+                </div>
+            </a>
+            <!-- fifth button -->
+            <a href="{% url 'ap_youtube' %}">
+                <div class="ad_sidebar_btn_content">
+                    {% if title_pager == "Youtube" %}
+                    <button class="active_sc">
+                        {% else %}
+                        <button>
+                            {% endif %}
+                            <div class="np_sidebar_btn_row">
+                                <div class="np_sidebar_btn_col1">
+                                    <i class="fa-brands fa-youtube" style="font-size: 15px"></i>
+                                    <span id="bkn5">Youtube</span>
+                                </div>
+                                <div class="np_sidebar_btn_col2">
+                                    <img src="{% static 'media\image\icons8-expand-arrow-100.png' %}" alt="">
+                                </div>
+                            </div>
+                        </button>
+                    </button>
+                </div>
+            </a>
+            <!-- sixth button -->
+            <div class="ad_sidebar_btn_content">
+                <a href="{% url 'ads_list_page' %}">
+                    {% if title_pager == "Advertisement" %}
+                    <button class="active_sc">
+                        {% else %}
+                        <button>
+                            {% endif %}
+                            <div class="np_sidebar_btn_row">
+                                <div class="np_sidebar_btn_col1">
+                                    <i class="fa-solid fa-rectangle-ad" style="font-size: 15px"></i>
+                                    <span id="bkn6">Adds</span>
+                                </div>
+                                <div class="np_sidebar_btn_col2">
+                                    <img src="{% static 'media\image\icons8-expand-arrow-100.png' %}" alt="">
+                                </div>
+                            </div>
+                        </button>
+                    </button>
+                </a>
+            </div>
+            </a>
+            <div class="ap_sidebar_hr">
+                <hr noshade color="#15BBF8" id="hr"/>
+            </div>
+            <!-- code for the buttons after the hr line -->
+            <!-- seventh button -->
+            {% recursetree category_query %}
+                <div class="ad_sidebar_btn_content">
+                    <a href="{% url 'ap_add_sub_title' node.id %}">
+                        <button>
+                            <div class="np_sidebar_btn_row">
+                                <div class="np_sidebar_btn_col1">
+                                    <i class="fa-solid fa-microphone-lines" style="font-size: 15px"></i>
+                                    <span id="bkn">{{ node.name }}</span>
+                                </div>
+
+                                <div class="np_sidebar_btn_col2">
+                                    <img src="{% static 'media\image\icons8-expand-arrow-100.png' %}" alt=""/>
+                                </div>
+                            </div>
+                        </button>
+                    </a>
+                </div>
+            {% endrecursetree %}
+            <!-- for the add button at last -->
+            <div class="ap_samachar_add_btn" id="demo">
+                <a href="{% url 'ap_add_more_tittle' %}">
+                    <button type="submit">
+                        <img src="{% static 'media\image\icons8-add-column-60.png' %}" alt=""/>
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- sidebar ends -->

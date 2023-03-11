@@ -1,0 +1,274 @@
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    background-color: #F2F2F2;
+}
+
+a {
+    text-decoration: none;
+}
+
+.newsportal_adminpannel_maincontainer {
+    display: block;
+}
+
+
+/* css for topbar starts */
+
+.npap_header_container {
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    z-index: 3;
+    background-color: #2C2A2E;
+    display: flex;
+    border-bottom: solid 3px #15BBF8;
+}
+
+.npap_col1 {
+    width: 15%;
+    padding-top: 10px;
+}
+
+.npap_col2 {
+    width: 70%;
+}
+
+.npap_col3 {
+    width: 15%;
+    display: flex;
+    padding-top: 10px;
+}
+
+.npap_logo {
+    width: 57%;
+    height: 80%;
+    margin-left: 30px;
+}
+
+.npap_logo img {
+    width: 100%;
+    height: 100%;
+}
+
+.npap_nav_header_navbar {
+    width: 100%;
+    height: auto;
+}
+
+.npap_nav_header_navbar_list {
+    width: 100%;
+    height: auto;
+    padding-top: 18px;
+    display: flex;
+}
+
+.npap_list_dashboard {
+    width: 13%;
+    text-align: center;
+}
+
+.npap_list_nepalinews {
+    width: 13%;
+    text-align: center;
+}
+
+.npap_list_englishnews {
+    width: 13%;
+    text-align: center;
+}
+
+.npap_list_aboutus {
+    width: 13%;
+    text-align: center;
+}
+
+.npap_nav_header_navbar_list a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+.npap_active {
+    color: #15BBF8 !important;
+    font-weight: bold;
+    border-bottom: solid 5px #15BBF8;
+    padding-bottom: 10px;
+}
+
+.npap_bell {
+    width: 33.33%;
+}
+
+.npap_settings {
+    width: 33.33%;
+}
+
+.npap_profile {
+    width: 33.33%;
+}
+
+.npap_profile img {
+    width: 40%;
+    height: 80%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+/* css for topbar ends */
+
+.newsportal_adminpannel_subcontainer {
+    display: flex;
+    flex-direction: row-reverse;
+    height: 100%;
+    width: 100%;
+}
+
+
+/* css for sidebar starts */
+
+.ap_onclick_sidebar_container {
+    background-color: #2c2a2e;
+    width: 12%;
+    height: 100%;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 53px;
+    overflow-x: hidden;
+    padding: 0.5% 1%;
+    border-right: 4px solid #15BBF8;
+}
+
+.ad_sidebar_btn {
+    display: grid;
+}
+
+.ad_sidebar_btn button,
+.ap_samachar_add_btn button {
+    background-color: #474747;
+    color: white;
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+}
+
+.ad_sidebar_btn span {
+    padding-left: 5%;
+    font-size: 1.2em;
+}
+
+.ad_sidebar_btn_content {
+    padding: 2% 3%;
+}
+
+.np_sidebar_btn_row {
+    display: flex;
+    width: 100%;
+}
+
+.np_sidebar_btn_col1 {
+    width: 90%;
+    padding: 4% 0%;
+}
+
+.np_sidebar_btn_col2 {
+    width: 10%;
+    padding: 6% 3%;
+}
+
+.ad_sidebar_btn button:hover {
+    background-color: #15BBF8;
+}
+
+button:hover {
+    color: black;
+}
+
+.np_sidebar_btn_col1 img {
+    object-fit: cover;
+}
+
+#hr {
+    border: 1.5px solid #15BBF8;
+}
+
+.ap_samachar_add_btn {
+    /* width:100%; */
+    text-align: center;
+    padding: 2% 3%;
+}
+
+.ap_samachar_add_btn img {
+    padding: 3% 5%;
+}
+
+
+/*css for side bar ends  */
+
+
+/* css for main body starts  */
+
+.ap_layout_main_body {
+    /* background-color: #324807; */
+    /* width:83%; */
+    height: auto;
+    margin-top: 45px;
+    position: absolute;
+    left: 12%;
+    display: flex;
+}
+
+
+/* css for the card component in main body  */
+
+.npap_boxandimg {
+    height: 300px;
+    width: 50%;
+    background-color: #F2F2F2;
+}
+
+.npap_eachbox {
+    height: 300px;
+    width: 250px;
+    text-align: center;
+    margin: 100px;
+    border-radius: 20px;
+}
+
+.npap_imagepart {
+    height: 77%;
+    background-color: white;
+    border-radius: 20px 20px 0px 0px;
+}
+.npap_imagepart i{
+font-weight:boler;
+font-size:145px;
+color:black;
+margin-top:18%;
+}
+
+.npap_textpart {
+    height: 23%;
+    color: white;
+    font-weight: bolder;
+    font-size: larger;
+    background-color: #15BBF8;
+    border-radius: 0px 0px 20px 20px;
+}
+
+.npap_imagepart img {
+    width: 60%;
+    height: 60%;
+    margin-top: 45px;
+    object-fit: contain;
+}
+
+.npap_textpart p {
+    padding-top: 19px;
+    margin-block-start: 0em;
+}

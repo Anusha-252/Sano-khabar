@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+{% load static %}
+{% load widget_tweaks %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/admin_pannel/merging_ss_edit_news.css' %}">
+    <link rel="stylesheet" href="{% static 'fontawesome-free-6.0.0-beta3-web/css/all.css' %}">
+    <link rel="stylesheet" href="{% static 'css/admin_pannel/navbar.css' %}">
+    <link rel="stylesheet" href="{% static 'css/admin_pannel/sidebar.css' %}">
+    <title>Document</title>
+    <script src="{% static 'js/admin_pannel.js' %} "></script>
+
+</head>
+
+<body>
+<div class="newsportal_adminpannel_maincontainer">
+    {% include 'admin_pannel/admin_panel_navbar.html' %}
+
+    <div class="newsportal_adminpannel_subcontainer_edit_brking_news">
+        <div class="np_ap_sc1">
+           {% include 'admin_pannel/sidebar.html' with title_pager=title_high %}
+
+        </div>
+        <!-- mainbody starts -->
+        <div class="np_ap_sc2">
+            <div class="np_ap_newsform">
+                <!--  nf heading starts-->
+                <div class="np_ap_nf_heading">
+                    <div class="np_ap_nf_title">
+                        <i class="fa-solid fa-angle-left"></i>
+                        <h4>Edit Breaking News</h4>
+                    </div>
+
+                </div>
+                <!-- nf heading ends -->
+                <form action="{% url 'edit_breaking_news_page_post' breaking_news_query.id %}" method="post">
+                    {% csrf_token %}
+                    <!-- nf  table content starts-->
+                    <div class="np_ap_nf_content">
+                        <div class="np_ap_nf_fp">
+                            <div class="np_ap_nf_fp_content">
+
+                                <div class="f_div">
+                                    <div class="np_ap_fname">
+
+                                        <label for="fname">Title Name :</label>
+                                    </div>
+                                    <div class="np_ap_ftext">
+                                        {% render_field form.title %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <h2>Is active</h2>{{form.is_active}}
+                        <div class="np_ap_nf_tp">
+                            <div class="np_ap_nf_tp_content">
+                                <div class="np_ap_update">
+
+                                    <button class="np_ap_update_btn">Update</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </form>
+                <!-- nf table content ends -->
+            </div>
+        </div>
+        <!-- mainbody ends -->
+    </div>
+
+</div>
+</body>
+
+</html>

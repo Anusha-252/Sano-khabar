@@ -1,0 +1,159 @@
+a{
+text-decoration:none;
+color:none;
+}
+.np_hnews_container{
+    height: auto;
+    width: 90%;
+    margin: auto;
+    display: flex;
+}
+.np_hnews_content{
+    width: 70%;
+    padding: 2% 5% 2% 0%;
+}
+.np_hnews_heading{
+    padding-bottom: 0px;
+    
+}
+.np_hnews_heading span{
+  font-size: x-large;
+  text-decoration: none;
+  font-weight: 700;
+}
+/* from the manoranjan container copied */
+.np_hnews_last_news{
+    display: flex;
+    padding-top: 2%;
+}
+.np_manoranjan_container{
+    /* margin:10% auto; */
+    width:25%;
+    height: 406px;
+    /* padding:2% 3% 2% 0%; */
+    color:black !important;
+}
+.np_manoranjan_container a{
+color:none;
+}
+.np_manoranjan_imagepart{
+    width:100%;
+    height:50%;
+    overflow: hidden;
+
+}
+.np_manoranjan_imagepart img{
+    width:100%;
+    height:100%;
+    object-fit: fill;
+    transition: transform 0.3s ease;
+
+    
+}
+.np_manoranjan_imagepart img:hover{
+    transform: scale(1.05);
+}
+
+
+.np_manoranjan_description{
+    width:100%;
+    height:50%;
+    background-color: #E8E8E8;
+}
+
+.np_manoranjan_mhead h1{
+    font-size: x-large;
+    padding:0% 9%;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    text-align: center;
+  line-height: 1.7em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+
+}
+
+.np_manoranjan_mhead h1:hover{
+    color: red;
+}
+.np_manoranjan_lr{
+    display: flex;
+    margin:7% 39%;
+    
+}
+.np_manoranjan_lr p{
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    padding-left: 10px;
+    font-size: small;
+}
+#first_column{
+    padding: 1%;
+    width:33.33%;
+}
+#second_column{
+    padding-left: 2%;
+    width:33.33%;
+}
+#third_column{
+    padding-left: 2%;
+    width:33.33%;
+}
+
+/* tjakhabar css */
+
+.np_tk_container_content{
+    padding: 2% 2% 2% 0%;
+    width: 30%;
+}
+
+.np_tk_snews_container{
+    
+    margin:4% auto;
+    display: flex;
+    width: 100%;
+    height: 145px;
+}
+.np_tk_snews_imagepart{
+    width: 50%;
+    overflow: hidden;
+    
+}
+.np_tk_snews_imagepart img{
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+.np_tk_snews_imagepart img:hover{
+    transform: scale(1.05); 
+}
+
+
+.np_tk_snews_description_mtitle{
+    width:50%;
+    background-color: #E8E8E8;
+    
+}
+.np_tk_snews_description_mtitle h1{
+    padding:1% 8%;
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 8px;
+    overflow: hidden;
+line-height:2em;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+   
+}
+.np_tk_snews_description_mtitle h1:hover{
+    color:red;
+}
+
+/* small news container ends here */

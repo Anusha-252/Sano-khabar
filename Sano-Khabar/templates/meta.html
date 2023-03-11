@@ -1,0 +1,71 @@
+{% load static %}
+<title>SanoKhabar</title>
+
+{% if wmi == 'per_page' %}
+<!--    meta from here-->
+
+    <meta name="title" content="{{new_objects.title}}">
+    <meta name="description" content="{{new_objects.news_summary}}">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ request.path }}">
+    <meta property="og:title" content="{{new_objects.title}}">
+    <meta property="og:description" content="{{new_objects.news_summary}}">
+    <meta property="og:image" content="https://www.sanokhabar.com{{new_objects.photo_img.url}}">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="{{ request.path }}">
+    <meta property="twitter:title" content="{{new_objects.title}}">
+    <meta property="twitter:description" content="{{new_objects.news_summary}}">
+    <meta property="twitter:image" content="https://www.sanokhabar.com{{new_objects.photo_img.url}}">
+
+
+<!--    meta till here-->
+{% elif wmi == 'all_news' %}
+<!--    meta from here-->
+
+    <meta name="title" content='Sano Khabar : {{ title }}'>
+    <meta name="description" content='Sano Khabar'>
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ request.path }}">
+    <meta property="og:title" content='Sano Khabar : {{ title }}'>
+    <meta property="og:description" content='Sano Khabar'>
+    <meta property="og:image" content="https://www.sanokhabar.com{% static 'images/metanews.png' %}">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="{{ request.path }}">
+    <meta property="twitter:title" content="Sano Khabar : {{ title }}">
+    <meta property="twitter:description" content="{{new_objects.news_summary}}">
+    <meta property="twitter:image" content="https://www.sanokhabar.com{% static 'images/metanews.png' %}">
+
+
+<!--    meta till here-->
+{% else %}
+<!--    meta from here-->
+
+    <meta name="title" content='Sano Khabar'>
+    <meta name="description" content='Sano Khabar'>
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ request.path }}">
+    <meta property="og:title" content='Sano Khabar'>
+    <meta property="og:description" content='Sano Khabar'>
+    <meta property="og:image" content="https://www.sanokhabar.com{% static 'images/metanews.png' %}">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="{{ request.path }}">
+    <meta property="twitter:title" content="Sano Khabar">
+    <meta property="twitter:description" content="{{new_objects.news_summary}}">
+    <meta property="twitter:image" content="https://www.sanokhabar.com{% static 'images/metanews.png' %}">
+
+
+<!--    meta till here-->
+
+{% endif%}

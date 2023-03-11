@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% load static %}
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/ads3.css' %}" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="np_add3_container">
+      <div class="add3_eachadd" id="017">
+        {% for ads in ads_content_017 %} {% if ads.ads_num == 17 %}
+        <a href="{{ads.link}}">
+        <img src="{{ ads.photo_img.url }}" />
+      </a>
+        {% endif %} {% endfor%}
+      </div>
+      <div class="add3_eachadd" id="018">
+        {% for ads in ads_content_018 %} {% if ads.ads_num == 18 %}
+        <a href="{{ads.link}}">
+        <img src="{{ ads.photo_img.url }}" />
+      </a>
+        {% endif %} {% endfor%}
+      </div>
+      <div class="add3_eachadd" id="019">
+        {% for ads in ads_content_019 %} {% if ads.ads_num == 19 %}
+        <a href="{{ads.link}}">
+        <img src="{{ ads.photo_img.url }}" />
+      </a>
+        {% endif %} {% endfor%}
+      </div>
+      <div class="add3_eachadd" id="020">
+        {% for ads in ads_content_020 %} {% if ads.ads_num == 20 %}
+        <a href="{{ads.link}}">
+        <img src="{{ ads.photo_img.url }}" />
+      </a>
+        {% endif %} {% endfor%}
+      </div>
+      <div class="add3_eachadd" id="021">
+        {% for ads in ads_content_021 %} {% if ads.ads_num == 21 %}
+        <a href="{{ads.link}}">
+        <img src="{{ ads.photo_img.url }}" />
+      </a>
+        {% endif %} {% endfor%}
+      </div>
+      <div class="add3_eachadd" id="022">
+        {% for ads in ads_content_022 %} {% if ads.ads_num == 22 %}
+        <a href="{{ads.link}}">
+        <img src="{{ ads.photo_img.url }}" />
+      </a>
+        {% endif %} {% endfor%}
+      </div>
+      <div class="add3_eachadd" id="023">
+        {% for ads in ads_content_023 %} {% if ads.ads_num == 23 %}
+        <a href="{{ads.link}}">
+        <img src="{{ ads.photo_img.url }}" />
+      </a>
+        {% endif %} {% endfor%}
+      </div>
+      <div class="add3_eachadd" id="024">
+        {% for ads in ads_content_024 %} {% if ads.ads_num == 24 %}
+        <a href="{{ads.link}}">
+        <img src="{{ ads.photo_img.url }}" />
+      </a>
+        {% endif %} {% endfor%}
+      </div>
+
+    </div>
+  </body>
+</html>

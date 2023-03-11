@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+{% load static %}
+{% load mptt_tags %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="{% static  'css/admin_pannel/layout_page.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/admin_pannel/navbar.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/admin_pannel/sidebar.css' %}"/>
+    <link rel="stylesheet" href="{% static 'fontawesome-free-6.0.0-beta3-web/css/all.css' %}"/>
+    <title>Landing_Page</title>
+    <script src="{% static 'js/admin_pannel.js' %}"></script>
+</head>
+
+<body>
+<div class="newsportal_adminpannel_maincontainer">
+    <!-- navbar starts -->
+    {% include 'admin_pannel/admin_panel_navbar.html' %}
+    <!-- navbar ends -->
+    <!-- sidebar starts -->
+    {% include 'admin_pannel/sidebar.html' with title_pager=title_high %}
+    <!-- sidebar ends -->
+    <!-- mainbody starts -->
+    <div class="ap_layout_main_body">
+        <!-- first component of main body  -->
+        <a href="{% url 'ap_landing_page' %}">
+            <div class="npap_boxandimg">
+                <div class="npap_eachbox">
+                    <div class="npap_imagepart">
+                        <img src="{% static 'media\image\external-breaking-news-press-and-media-flaticons-lineal-color-flat-icons1.png' %}"
+                             alt="image_here"/>
+                    </div>
+                    <div class="npap_textpart">
+                        <p>Landing Page Layout</p>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <!-- first component ends here  -->
+        <!-- second component of main body  -->
+        <a href="{% url 'ap_titles_name'%}">
+            <div class="npap_boxandimg">
+                <div class="npap_eachbox">
+                    <div class="npap_imagepart">
+                        <img src="{% static 'media\image\external-breaking-news-press-and-media-flaticons-lineal-color-flat-icons.png' %}"
+                             alt="image_here"/>
+                    </div>
+                    <div class="npap_textpart">
+                        <p>Review Title Name</p>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <!-- second component ends here  -->
+        <!-- third component of main body  -->
+        <a href="{% url 'ap_delete_category'%}">
+            <div class="npap_boxandimg">
+                <div class="npap_eachbox">
+                    <div class="npap_imagepart">
+                        <img src="{% static 'media\image\delete.jfif' %}" alt="image_here"/>
+                    </div>
+                    <div class="npap_textpart">
+                        <p>Delete Title</p>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <!-- third component ends here  -->
+        <!--      forth component starts here -->
+        <a href="{% url 'ap_add_news' %}">
+            <div class="npap_boxandimg">
+                <div class="npap_eachbox">
+                    <div class="npap_imagepart">
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                    <div class="npap_textpart">
+                        <p>Add News</p>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <!--        forth component ends here-->
+    </div>
+    <!-- mainbody ends -->
+</div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+{% load static %}
+<div class="np_rajniti_primecontainer">
+    <div class="np_rajniti_maincontainer">
+        <div class="np_rajniti_heading">
+            <h4>{{first_section11.category.name}}</h4>
+        </div>
+        <div class="np_rajniti_newspart">
+            <!-- news left part starts-->
+
+            <div class="np_rajniti_newspart_left">
+                <a href="#">
+                    <div class="np_rajniti_newspart_left_small_container">
+                        <div class="np_rajniti_newspart_left_small_container_image">
+                            <img src="{{first_section11.photo_img.url}}" alt=""/>
+                        </div>
+                        <div class="np_rajniti_newspart_left_small_container_description">
+                            <h1>{{first_section11.title}}</h1>
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="np_rajniti_newspart_right_small_container">
+                        <div class="np_rajniti_newspart_right_small_container_image">
+                            <img src="{{first_section12.photo_img.url}}" alt=""/>
+                        </div>
+                        <div class="np_rajniti_newspart_right_small_container_description">
+                            <h1>{{first_section12.title}}</h1>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!-- news left part  ends-->
+            <!-- news right part starts -->
+            <div class="np_rajniti_newspart_right">
+                {% for i in section1_section2 %}
+                <a href="#">
+                    <div class="np_rajniti_newspart_right_small_container">
+                        <div class="np_rajniti_newspart_right_small_container_image">
+                            <img src="{{i.photo_img.url}}" alt=""/>
+                        </div>
+                        <div class="np_rajniti_newspart_right_small_container_description">
+                            <h1>{{i.title}}</h1>
+                        </div>
+                    </div>
+                </a>
+                {% endfor %}
+            </div>
+            <!-- news right part ends -->
+        </div>
+    </div>
+    <!--ads_here-->
+</div>

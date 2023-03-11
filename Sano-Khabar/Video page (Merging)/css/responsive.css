@@ -1,0 +1,121 @@
+/* responsive css for header and nav bar starts here */
+
+@media screen and (max-width: 600px) {
+    .np_nav_header_logo {
+        width: 100%!important;
+        margin-top: 20px;
+    }
+    /* hamburger css starts */
+    .np_nav_header_hamburger {
+        display: block;
+        margin: auto;
+    }
+    .np_nav_header_hamburger i {
+        font-size: 25px;
+    }
+    /* hamburger css ends */
+    .np_nav_header_img {
+        width: 70%;
+        height: auto;
+    }
+    .np_nav_header_midbar {
+        display: none;
+    }
+    .np_nav_header_navbar {
+        margin: 15px 0px;
+    }
+    .np_nav_header_navbar_list {
+        display: none;
+    }
+    /* english css starts*/
+    .np_nav_header_forEnglish {
+        display: block;
+        margin: auto;
+    }
+    .np_nav_header_forEnglish h4 {
+        margin: 0px;
+        padding: 0px;
+        font-size: 20px;
+        opacity: 0.5;
+        font-weight: bolder;
+    }
+    /* english css ends */
+    .np_nav_header_navbar {
+        border-bottom: solid 3px #FF0000;
+    }
+}
+
+
+/* responsive css for header and nav bar ends here */
+
+@media only screen and (max-width: 600px) {
+    .np_vm_addcontainer {
+        display: none;
+    }
+    .np_n3_news3 {
+        display: block;
+    }
+    .np_n3_newsitem {
+        margin: 10px 10px 50px 10px;
+    }
+    .np_vm_pagination {
+        display: inline-block;
+        color: white;
+        margin-left: 25px;
+    }
+}
+
+
+/* responsive css for footer starts here */
+
+@media only screen and (max-width: 600px) {
+    .np_footer_top {
+        display: block;
+        margin-right: 50px;
+        height: auto;
+    }
+    .np_footer_col_content {
+        margin: 0% 5%;
+    }
+    .np_footer_col1 {
+        width: 100%;
+        margin: auto;
+        padding: 40px 0px 30px 0px;
+    }
+    .np_footer_col2 {
+        width: 70%;
+        margin: 50px 35px;
+    }
+    .np_footer_col3 {
+        width: 70%;
+        margin: 50px 35px;
+    }
+    .np_footer_col4 {
+        width: 70%;
+        margin: 50px 35px 0px 35px;
+        padding-bottom: 72px;
+    }
+    .np_footer_bottom {
+        flex-direction: column;
+        height: 100px;
+        width: 100%;
+    }
+    .np_footer_bottom_right {
+        width: 100%;
+        height: 100%;
+    }
+    .np_footer_bottom_left {
+        width: 100%;
+        height: 100%;
+    }
+    .np_footer_bottom_left p {
+        margin: 20px 120px;
+    }
+    .np_footer_bottom_right p {
+        margin: 0px 65px;
+        float: none;
+    }
+}
+
+
+/* responsive css for footer ends here */

@@ -1,0 +1,347 @@
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    background-color: #F2F2F2;
+}
+
+a {
+    text-decoration: none;
+}
+
+.mystyle {
+    display: block !important;
+}
+
+.newsportal_adminpannel_maincontainer {
+    display: block;
+}
+
+
+/* css for topbar starts */
+
+.npap_header_container {
+    height: 50px;
+    position: fixed;
+    z-index: 3;
+    width: 100%;
+    background-color: #2C2A2E;
+    display: flex;
+    border-bottom: solid 3px #15BBF8;
+}
+
+.npap_col1 {
+    width: 15%;
+    padding-top: 10px;
+}
+
+.npap_col2 {
+    width: 70%;
+}
+
+.npap_col3 {
+    width: 15%;
+    display: flex;
+    padding-top: 10px;
+}
+
+.npap_logo {
+    width: 57%;
+    height: 80%;
+    margin-left: 30px;
+}
+
+.npap_logo img {
+    width: 100%;
+    height: 100%;
+}
+
+.npap_nav_header_navbar {
+    width: 100%;
+    height: auto;
+}
+
+.npap_nav_header_navbar_list {
+    width: 100%;
+    height: auto;
+    padding-top: 18px;
+    display: flex;
+}
+
+.npap_list_dashboard {
+    width: 13%;
+    text-align: center;
+}
+
+.npap_list_nepalinews {
+    width: 13%;
+    text-align: center;
+}
+
+.npap_list_englishnews {
+    width: 13%;
+    text-align: center;
+}
+
+.npap_list_aboutus {
+    width: 13%;
+    text-align: center;
+}
+
+.npap_nav_header_navbar_list a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+.npap_active {
+    color: #15BBF8 !important;
+    font-weight: bold;
+    border-bottom: solid 5px #15BBF8;
+    padding-bottom: 10px;
+}
+
+.npap_bell {
+    width: 33.33%;
+}
+
+.npap_settings {
+    width: 33.33%;
+}
+
+.npap_profile {
+    width: 33.33%;
+}
+
+.npap_profile img {
+    width: 40%;
+    height: 80%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+/* css for topbar ends */
+
+.newsportal_adminpannel_subcontainer {
+    display: flex;
+    flex-direction: row-reverse;
+    height: 100%;
+    width: 100%;
+}
+
+
+/* css for mainbody starts */
+
+.np_ap_tf_title_content {
+    width: 86%;
+    margin-top: 53px;
+}
+
+
+/* tf title first part css starts */
+
+.np_ap_tf_title_content_fp {
+    display: flex;
+    width: 95%;
+    margin: 20px;
+}
+
+.np_ap_tf_title_left {
+    float: left;
+    width: 50%;
+    font-size: 22px;
+    padding: 8px 0px;
+    /* font-family: Segoe UI; */
+    color: #2C2A2E;
+}
+
+.np_ap_tf_title_right {
+    text-align: right;
+    width: 50%;
+}
+
+.np_ap_tf_title_addbtn {
+    background-color: #15BBF8;
+    border: none;
+    color: white;
+    padding: 8px 50px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+
+/* tf title first part css starts */
+
+
+/* tf title second part css starts */
+
+.np_ap_tf_title_content_sp {
+    width: 95%;
+    margin: 20px;
+}
+
+#np_ap_tf_title_table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: auto;
+    /* border-bottom: solid 2px black; */
+    border: solid 2px #393939;
+}
+
+th {
+    background-color: #393939;
+    color: #FFFFFF;
+    /* border-left: solid 2px black;
+    border-right: solid 2px black; */
+    font-weight: normal;
+}
+
+#np_ap_tf_title_sp_1 {
+    width: 3%;
+}
+
+#np_ap_tf_title_sp_2 {
+    width: 18%;
+}
+
+#np_ap_tf_title_sp_3 {
+    width: 8%;
+}
+
+#np_ap_tf_title_sp_4 {
+    width: 11%;
+}
+
+#np_ap_tf_title_sp_5 {
+    width: 11%;
+}
+
+#np_ap_tf_title_sp_6 {
+    width: 8%;
+}
+
+#np_ap_tf_title_sp_7 {
+    width: 21%;
+}
+
+tr {
+    border: none;
+    height: 35px;
+    font-size: 17px;
+    /* border: solid 2px black; */
+    text-align: center;
+}
+
+td {
+    border-right: solid 2px #393939;
+    border-left: solid 2px #393939;
+    /* border: solid 2px black; */
+    padding: 5px;
+    text-align: center;
+    font-size: 18px;
+    color: #2C2A2E;
+}
+
+.np_ap_tf_title_viewbtn {
+    width: 76px;
+    height: 30px;
+    background-color: #15BBF8;
+    cursor: pointer;
+    padding: 5px 5px 5px 5px;
+    color: #ffffff;
+    border: 2px solid #15BBF8;
+    border-radius: 10px;
+    font-weight: 20;
+}
+
+.np_ap_tf_title_deletebtn {
+    width: 76px;
+    height: 30px;
+    background-color: #C70505;
+    cursor: pointer;
+    padding: 5px 5px 5px 5px;
+    color: #ffffff;
+    border: 2px solid#C70505;
+    border-radius: 10px;
+    font-weight: 20;
+}
+
+.np_ap_tf_title_mainbtn_01 {
+    width: 76px;
+    height: 30px;
+    background-color: #F8A515;
+    cursor: pointer;
+    padding: 5px 5px 5px 5px;
+    color: #ffffff;
+    border: 2px solid#F8A515;
+    border-radius: 10px;
+    font-weight: 20;
+}
+
+.np_ap_tf_title_mainbtn_02 {
+    width: 76px;
+    height: 30px;
+    background-color: #B2B2B2;
+    cursor: pointer;
+    padding: 5px 5px 5px 5px;
+    color: #ffffff;
+    border: 2px solid#B2B2B2;
+    border-radius: 10px;
+    font-weight: 20;
+}
+
+
+/* tf title second part css ends */
+
+
+/* pagination css starts */
+
+.np_ap_tf_title_pagination {
+    text-align: center;
+    margin: 40px auto;
+    width: 80%;
+}
+
+.np_ap_tf_title_pagination a {
+    color: #707070;
+    text-align: center;
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    opacity: 0.8;
+}
+
+#pg_left {
+    font-size: 25px;
+}
+
+#pg_right {
+    font-size: 25px;
+}
+
+.np_ap_tf_title_pagination a.active {
+    background-color: #FEC8C8;
+    color: #FF0000;
+    border-radius: 5px;
+}
+
+.np_ap_tf_title_pagination a:hover:not(.active) {
+    background-color: #ddd;
+    border-radius: 5px;
+}
+
+
+/* pagination css ends */
+
+
+/* css for mainbody ends */
+.np_ap_tf_title_mainbtn_02:hover{
+background-color:#F8A515;
+}

@@ -1,0 +1,59 @@
+{% load static %} {% load mptt_tags %}
+<!-- sidebar starts -->
+<div class="ap_onclick_sidebar_bck">
+  <div class="ap_onclick_sidebar_container">
+    <div class="np_sidebar_news">
+      <div class="np_sidebar_news_col1">
+        <img src="image\icons8-expand-arrow-100.png" alt="" />
+      </div>
+      
+      <div class="np_sidebar_news_col2">
+        <i class="fa-regular fa-newspaper" style="font-size: 20px"></i>
+          
+        <span id="bkn001">{{current_query.name}}</span>
+        
+      </div>
+      
+    </div>
+    <div class="ad_sidebar_btn" id="myDIV">
+      <!-- first button  -->
+      {% for news in category_query %}
+
+      <div class="ad_sidebar_btn_content">
+      <a href="{% url 'ap_add_sub_title' news.id %}">
+        <button class="btn active">
+          <div class="np_sidebar_btn_row">
+            <div class="np_sidebar_btn_col1">
+              <span id="bkn001">{{news.name}}</span>
+            </div>
+          </div>
+        </button>
+      </a>
+      </div>
+      {% endfor %}
+
+      <!-- for the add button at last -->
+      <form action="{% url 'ap_add_sub_title_post' category_id %}" method="post">
+        {% csrf_token%}
+        <div class="ap_samachar_add_btn_container">
+          <div class="ap_samachar_add_btn" id="demo" onclick="myFunction()">
+            <div class="ap_samachar_add_btn_image">
+              <img src="{% static 'media\image\icons8-add-column-60.png' %}" alt=""/>
+            </div>
+          </div>
+          <div class="ap_samachar_add_lr" id="add_new">
+            <div class="ap_samachar_add_textfield">
+              <input name="title" placeholder="Enter sub_category" type="text"/>
+            </div>
+            <div class="ap_samachar_add_save_btn">
+              <button type="submit">
+                <span>ADD</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<!-- sidebar ends -->

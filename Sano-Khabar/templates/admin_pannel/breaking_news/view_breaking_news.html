@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/admin_pannel/merging_ss_edit_news.css' %}">
+    <link rel="stylesheet" href="{% static 'css/admin_pannel/layout_page.css' %}">
+    <link rel="stylesheet" href="{% static 'fontawesome-free-6.0.0-beta3-web/css/all.css' %}">
+    <link rel="stylesheet" href="{% static 'css/admin_pannel/navbar.css' %}">
+    <link rel="stylesheet" href="{% static 'css/admin_pannel/sidebar.css' %}"/>
+    <title>Document</title>
+    <script src="{% static 'js/admin_pannel.js' %}"></script>
+</head>
+
+<body>
+<div class="newsportal_adminpannel_maincontainer">
+    <!-- navbar starts -->
+    {% include 'admin_pannel/admin_panel_navbar.html' %}
+
+    <!-- navbar ends -->
+    <div class="newsportal_adminpannel_subcontainer">
+        <!-- sidebar starts -->
+        <div class="np_ap_sc1">
+         {% include 'admin_pannel/sidebar.html' with title_pager=title_high %}
+
+        </div>
+        <!-- sidebar ends -->
+        <!-- mainbody starts -->
+        <div class="np_ap_sc2">
+            <div class="np_ap_newsform">
+                <!--  nf heading starts-->
+                <div class="np_ap_nf_heading">
+                    <div class="np_ap_nf_title">
+                        <i class="fa-solid fa-angle-left"></i>
+                        <h4>समाचार Title</h4>
+                    </div>
+                </div>
+                <!-- nf heading ends -->
+
+                <!-- nf  table content starts-->
+                <div class="np_ap_nf_content">
+                    <div class="np_ap_nf_fp">
+                        <div class="np_ap_nf_fp_content">
+                            <form action="/action_page.php">
+                                <div class="f_div">
+                                    <div class="np_ap_fname">
+                                        <label for="fname">Title Name :</label>
+                                    </div>
+                                    <div class="np_ap_ftext">
+                                        <input type="text" id="fname" name="firstname" placeholder="">
+                                    </div>
+                                </div>
+                            </form>
+                            <a href="{% url 'admin_edit_breaking_news_page' %}">
+                                <div class="np_ap_update">
+                                    <button class="np_ap_update_btn">Edit</button>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- nf table content ends -->
+            </div>
+        </div>
+        <!-- mainbody ends -->
+    </div>
+
+</div>
+</body>
+
+</html>

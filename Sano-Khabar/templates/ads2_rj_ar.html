@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  {% load static %}
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/ads1.css' %}" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div class="np_add1_container">
+      <div class="add1_eachadd" id="002">
+        {% for ads in ads_content_002 %} {% if ads.ads_num == 2 %}
+       <a href="{{ads.link}}">
+       <img src="{{ ads.photo_img.url }}" />
+      </a>
+       {% endif %} {% endfor%}
+     </div>
+     <div class="add1_eachadd" id="003">
+       {% for ads in ads_content_003 %} {% if ads.ads_num == 3 %}
+       <a href="{{ads.link}}">
+       <img src="{{ ads.photo_img.url }}" />
+      </a>
+       {% endif %} {% endfor%}
+     </div>
+     <div class="add1_eachadd" id="004">
+       {% for ads in ads_content_004 %} {% if ads.ads_num == 4 %}
+       <a href="{{ads.link}}">
+       <img src="{{ ads.photo_img.url }}" />
+      </a>
+       {% endif %} {% endfor%}
+     </div>
+      <div class="add1_eachadd" id="005">
+        {% for ads in ads_content_005 %} {% if ads.ads_num == 5%}
+        <a href="{{ads.link}}">
+        <img src="{{ ads.photo_img.url }}" />
+      </a>
+        {% endif %} {% endfor %}
+      </div>
+    </div>
+  </body>
+</html>

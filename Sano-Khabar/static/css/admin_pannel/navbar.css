@@ -1,0 +1,225 @@
+
+/* css for topbar starts */
+
+.npap_header_container {
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    z-index: 3;
+    top:0px;
+    background-color: #2C2A2E;
+    display: flex;
+    border-bottom: solid 3px #15BBF8;
+}
+
+.npap_col1 {
+    width: 15%;
+    padding-top: 10px;
+    background-color:white;
+}
+
+.npap_col2 {
+    width: 65%;
+}
+
+.npap_col3 {
+    width: 20%;
+    display: flex;
+    padding-top: 10px;
+}
+
+.npap_logo {
+    width: 57%;
+    height: 80%;
+    margin-left: 30px;
+}
+
+.npap_logo img {
+    width: 100%;
+    height: 100%;
+}
+
+
+.npap_nav_header_navbar_list {
+    width: 100%;
+    height: auto;
+    padding-top: 18px;
+    display: flex;
+}
+
+.npap_list_items {
+    width: 17%;
+    text-align: center;
+}
+.npap_active{
+    color: #15BBF8 !important;
+    font-weight: bold;
+    border-bottom: solid 5px #15BBF8;
+    padding-bottom: 10px;
+}
+.npap_list_items:hover {
+  color: #15BBF8 !important;
+    font-weight: bold;
+    border-bottom: solid 5px #15BBF8;
+    padding-bottom: 10px;
+    }
+/*
+.npap_list_nepalinews {
+    width: 13%;
+    text-align: center;
+}
+
+.npap_list_englishnews {
+    width: 13%;
+    text-align: center;
+}
+
+.npap_list_aboutus {
+    width: 13%;
+    text-align: center;
+}
+*/
+.npap_nav_header_navbar_list a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+/*
+.npap_active {
+    color: #15BBF8 !important;
+    font-weight: bold;
+    border-bottom: solid 5px #15BBF8;
+    padding-bottom: 10px;
+}
+*/
+.npap_bell {
+    width: 25%;
+}
+
+.npap_settings {
+    width: 25%;
+}
+
+.npap_profile {
+    width: 50%;
+}
+
+.npap_profile img {
+    width: 40%;
+    height: 80%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+/* css for topbar ends */
+
+
+/* css for logout btn*/
+
+.logout_button img {
+  width: 27px;
+
+  float: left;
+}
+
+.logout {
+  font-size: .8em;
+
+	position: relative;
+  right: -18px;
+  bottom: -4px;
+  overflow: hidden;
+  letter-spacing: 3px;
+  opacity: 0;
+  transition: opacity .45s;
+  -webkit-transition: opacity .35s;
+
+}
+
+.logout_button {
+	text-decoration: none;
+	float: right;
+
+  color: white;
+  width: 35px;
+
+  transition: width .35s;
+  -webkit-transition: width .35s;
+  overflow: hidden
+}
+
+.npap_profile a:hover {
+  width: 150px;
+}
+
+.npap_profile a:hover .logout{
+  opacity: .9;
+}
+
+
+
+/* css for popup_notifications starts*/
+
+.npap_notifications_form-popup {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(110, 109, 109, 0.5);
+    z-index: 6;
+}
+
+.npap_notifications_closebtn {
+    margin-right: 15px;
+    float: right;
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    background-color: rgb(223, 215, 215);
+    color: #2a435b;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+.npap_notifications_closebtn:hover {
+    color: red;
+}
+
+.npap_notifications_popup_info1 {
+    width: 35%;
+    height: auto;
+    margin-top: 3%;
+    background-color: rgb(223, 215, 215);
+    margin-left: auto;
+    margin-right: 1%;
+    border-radius: 25px
+}
+
+.npap_notifications_popup_maincontent {
+ padding: 10px 51px 10px 30px;
+
+
+
+}
+
+.npap_notifications_maincontent_title {
+
+    font-size: large;
+}
+.npap_notification_content{
+height:auto;
+width:100%;
+margin:10px;
+}
+.npap_notification_item{
+width:100%;
+height:auto;
+margin:10px;
+}
+
+/* css for popup_form ends */

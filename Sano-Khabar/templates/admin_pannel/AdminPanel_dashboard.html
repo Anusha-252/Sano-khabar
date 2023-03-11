@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static  'css/admin_pannel/maindash.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/admin_pannel/navbar.css' %}">
+    <link rel="stylesheet" href="{% static 'fontawesome-free-6.0.0-beta3-web/css/all.css' %}"/>
+    <title>Admin_Pannel</title>
+    <script src="{% static 'js/admin_pannel.js' %}"></script>
+  </head>
+
+  <body>
+    <div class="newsportal_adminpannel_maincontainer">
+      <!-- navbar starts -->
+      {% include 'admin_pannel/admin_panel_navbar.html' %}
+      <!-- navbar ends -->
+      <div class="npap_header_maincontent">
+        <!-- dashboard content starts -->
+        <div class="npap_dashboard_container">
+          <div class="npap_dashboardleft">
+            <h1>Dashboard</h1>
+            <p>
+              Hello {{user.username}}, we help you manage your Newsportal
+              website.
+            </p>
+          </div>
+          <div class="npap_dashboardright">
+            <div class="npap_dashboard_profile">
+              <img src="{% static 'media/image/me.jpg' %}" alt="Image_here" />
+            </div>
+            <div class="npap_dashboard_text">
+              <p>Hello {{user.username}}</p>
+              <span>Admin</span>
+            </div>
+          </div>
+        </div>
+        <!-- dashboard content ends -->
+
+        <!-- box with image starts -->
+        <div class="npap_boxandimg">
+          <a href="{% url 'ap_layout_page' %}">
+            <div class="npap_eachbox">
+              <div class="npap_imagepart">
+                <img
+                  src="{% static 'media/image/nepal_flag.png' %}"
+                  alt="image_here"
+                />
+              </div>
+              <div class="npap_textpart">
+                <p>Nepali News</p>
+              </div>
+            </div>
+          </a>
+          <a href="#">
+            <div class="npap_eachbox">
+              <div class="npap_imagepart">
+                <img
+                  src="{% static 'media/image/uk_flag.png' %}"
+                  alt="image_here"
+                />
+              </div>
+              <div class="npap_textpart">
+                <p>English News</p>
+              </div>
+            </div>
+          </a>
+          <a href="#">
+            <div class="npap_eachbox">
+              <div class="npap_imagepart">
+                <img
+                  src="{% static 'media/image/about_us_pic.png' %}"
+                  alt="image_here"
+                />
+              </div>
+              <div class="npap_textpart">
+                <p>About Us</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <!-- box with image ends -->
+      </div>
+    </div>
+  </body>
+</html>

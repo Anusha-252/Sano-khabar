@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+{% load static %} {% load mptt_tags %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/admin_pannel/merging_ss_edit_news.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/admin_pannel/layout_page.css' %}"
+    />
+    <link rel="stylesheet" href="{% static 'css/admin_pannel/navbar.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/admin_pannel/sidebar.css' %}" />
+    <link
+      rel="stylesheet"
+      href="{% static 'fontawesome-free-6.0.0-beta3-web/css/all.css' %}"
+    />
+    <title>Document</title>
+    <script src="{% static 'js/admin_pannel.js' %}"></script>
+  </head>
+
+  <body>
+    <div class="newsportal_adminpannel_maincontainer">
+      <!-- navbar starts -->
+      {% include 'admin_pannel/admin_panel_navbar.html' %}
+
+      <!-- navbar ends -->
+      <div class="newsportal_adminpannel_subcontainer">
+        <!-- sidebar starts -->
+        <div class="np_ap_sc1">
+          {% include 'admin_pannel/sidebar.html' with title_pager=title_high %}
+        </div>
+        <!-- sidebar ends -->
+        <!-- mainbody starts -->
+        <div class="np_ap_sc2">
+          <div class="np_ap_newsform">
+            <!--  nf heading starts-->
+            <div class="np_ap_nf_heading">
+              <div class="np_ap_nf_title">
+                <i class="fa-solid fa-angle-left"></i>
+                <h4>Add Ads</h4>
+              </div>
+            </div>
+            <!-- nf heading ends -->
+
+            <!-- nf  table content starts-->
+            <div class="np_ap_nf_content">
+              <div class="np_ap_nf_fp">
+                <div class="np_ap_nf_fp_content">
+                  <form
+                    action="{% url 'add_ads_post' %}"
+                    method="post"
+                    enctype="multipart/form-data"
+                  >
+                    {% csrf_token %}
+                    <div class="f_div">
+                      <div class="np_ap_fname">
+                        <label for="fname">Title Name :</label>
+                      </div>
+                      <div class="np_ap_ftext">{{form.title}}</div>
+                    </div>
+                    <div class="f_div">
+                      <div class="np_ap_fname">
+                        <label for="img_upload">Upload Img :</label>
+                      </div>
+                      <div class="np_ap_ntc_thumb_text">
+                        <label class="img_upload">
+                          <div class="ntc_upload_button">
+
+                            <input
+                              name="photo_img"
+                              accept="image/*"
+                              id="file"
+                              onchange="loadFile(event)"
+                              type="file"
+                            />
+                            Choose Image
+                          </div>
+                          <p class="ntc_upload_image_display">
+                            <img id="output" />
+                          </p>
+                        </label>
+                      </div>
+                    </div>
+                    
+                    <div class="np_ap_ntc_landing_layout">
+                      <p>Select Ads</p>
+                      <select
+                        class="np_ap_ntc_ads"
+                        name="ads_num"
+                        id="_section_id"
+                      >
+                        <option value="default">---</option>
+
+                        <option value="1">001</option>
+                        <option value="2">002</option>
+                        <option value="3">003</option>
+
+                        <option value="4">004</option>
+                        <option value="5">005</option>
+                        <option value="6">006</option>
+
+                        <option value="7">007</option>
+                        <option value="8">008</option>
+                        <option value="9">009</option>
+
+                        <option value="10">010</option>
+                        <option value="11">011</option>
+                        <option value="12">012</option>
+
+                        <option value="13">013</option>
+                        <option value="14">014</option>
+                        <option value="15">015</option>
+
+                        <option value="16">016</option>
+                        <option value="17">017</option>
+                        <option value="18">018</option>
+
+                        <option value="19">019</option>
+                        <option value="20">020</option>
+                        <option value="21">021</option>
+
+                        <option value="22">022</option>
+                        <option value="23">023</option>
+                        <option value="24">024</option>
+
+                      </select>
+                    </div>
+                    
+
+                    <div class="f_div">
+                      <div class="np_ap_fname">
+                        <label for="img_upload">Link :</label>
+                      </div>
+                      {{form.link}}
+                    </div>
+                    <div class="np_ap_update">
+                      <button class="np_ap_update_btn" >Post</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+            <!-- nf table content ends -->
+          </div>
+        </div>
+        <!-- mainbody ends -->
+      </div>
+    </div>
+  </body>
+  <script>
+    var loadFile = function (event) {
+      var image = document.getElementById("output");
+      image.src = URL.createObjectURL(event.target.files[0]);
+    };
+  </script>
+</html>

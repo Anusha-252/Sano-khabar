@@ -1,0 +1,95 @@
+{% load static %} {% load social_share %} {% load mptt_tags %}
+<!-- Header Navigation Bar Start -->
+<div class="np_nav_header_maincontainer">
+    <div class="np_nav_header_logo">
+        <!-- hamburgerr -->
+        <div class="np_nav_header_hamburger">
+            <i class="fa fa-bars"></i>
+        </div>
+        <div class="np_nav_header_img">
+            <img
+                    src="{% static 'media/image/new news logo.png' %}"
+                    class="np_nav_header_logo_center"
+                    alt="image"
+            />
+        </div>
+        <!-- english -->
+        <div class="np_nav_header_forEnglish">
+            <h4>EN</h4>
+        </div>
+    </div>
+</div>
+<div class="np_nav_header_subcontainer">
+    <div class="np_nav_header_midbar">
+        <div class="np_nav_header_midbar_row">
+            <div class="np_nav_header_midbar_row_left">
+                <h5>{{nepali_date}}</h5>
+            </div>
+            <div class="np_nav_header_midbar_row_right">
+                <div class="np_nav_header_midbar_icon">
+                    {% post_to_facebook object_or_url '<i class="fab fa-facebook topBarColor"></i>' %}
+                    {% post_to_twitter "Sano Khabar" object_or_url '<i class="fab fa-twitter topBarColor"></i>' %}
+                    {% post_to_gplus object_or_url '<i class="fab fa-google topBarColor"></i>' %}
+                    {% post_to_whatsapp object_or_url '<i class="fab fa-whatsapp topBarColor"></i>' %}
+                    <a>English</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Navigation Bar start  -->
+
+    <div class="np_nav_header_navbar">
+        <div class="np_nav_header_navbar_list">
+            <div class="np_nav_header_navbar_item">
+                <a class="nav_active" href="{% url 'nepali_index' %}">होमपेज</a>
+            </div>
+            {% recursetree category_query %}
+            {% if node.name == title %}
+            <div class="np_nav_header_navbar_item">
+                <a class="nav_active" href="{% url 'nepali_list_news' node.id %}">{{ node.name }}</a>
+            </div>
+            {% else %}
+            <div class="np_nav_header_navbar_item">
+                <a href="{% url 'nepali_list_news' node.id %}">{{ node.name }}</a>
+                {% if not node.is_leaf_node %}
+                <div class="nav_dropdown_content">
+                    <a href="{% url 'nepali_list_news' node.id %}">{{children}}</a>
+<!--                    {% comment %} #how to get subtitle name-->
+<!--                    {% for category in category_query %}-->
+<!--                    <a href="{% url 'nepali_list_news' category.id %}">{{category.name}}</a>-->
+<!--                    {% endcomment%}-->
+                </div>
+                {% endif %}
+            </div>
+            {% endif %}
+            {% endrecursetree %}
+        </div>
+    </div>
+    <!-- Navigation Bar End -->
+
+    <!-- Header Navigation Bar End -->
+    <!--code for breaking news-->
+    {% if breaking_query %}
+    <div class="ticker">
+
+        <div class="title">
+            <h3>ब्रेकिङ न्युज</h3>
+        </div>
+
+        <div class="news">
+            <marquee>
+                <p>
+                    |
+                    {% for items in breaking_query %}
+                    |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    {{items.title}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
+                    {% endfor %}
+                    |
+                </p>
+
+            </marquee>
+        </div>
+    </div>
+    {% endif%}
+
+    

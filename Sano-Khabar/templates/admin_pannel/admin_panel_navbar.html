@@ -1,0 +1,93 @@
+{% load static %} {% load mptt_tags %}
+
+<!-- navbar starts -->
+<div class="npap_header_container">
+    <div class="npap_col1">
+        <a href="{% url 'ap_dashboard' %}">
+            <div class="npap_logo">
+                <img src="{% static 'media\image/new news logo.png' %}" class="np_nav_header_logo_center" alt="image"/>
+            </div>
+        </a>
+    </div>
+    <!-- Navigation Bar start  -->
+    <div class="npap_col2">
+        <div class="npap_nav_header_navbar">
+            <div class="npap_nav_header_navbar_list">
+                {% if title_nav == "Dashboard" %}
+                <div class="npap_list_items npap_active">
+                    {% else %}
+                    <div class="npap_list_items">
+                        {% endif %}
+                        <a href="{% url 'ap_dashboard' %}"> Dashboard </a>
+                    </div>
+                    <div class="npap_list_items">
+                        <a href="{% url 'ap_layout_page' %}"> Nepali_News </a>
+                    </div>
+                    <div class="npap_list_items">
+                        <a href="#"> English_News </a>
+                    </div>
+                    <div class="npap_list_items">
+                        <a href="#"> About Us </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Navigation Bar End -->
+        <div class="npap_col3">
+            <div class="npap_bell" onclick="openform_noti('popup_myForm_noti')">
+                <img src="{% static 'media\image/icons8-bell-100.png' %}" alt=""/>
+            </div>
+            <div class="npap_settings">
+                <img src="{% static 'media\image/icons8-setting-96.png' %}" alt=""/>
+            </div>
+
+            <div class="npap_profile">
+                <a class="logout_button" href="{% url 'logout_post' %}">
+                    <img src="{% static 'media\image/me.jpg' %}"/>
+                    <div class="logout">LOGOUT</div>
+                </a>
+
+            </div>
+        </div>
+    </div>
+    <!-- navbar ends -->
+    <!--  for breaking news marquee-->
+
+    <!--popup for notifications-->
+    <div class="npap_notifications_form-popup" id="popup_myForm_noti">
+        <div class="npap_notifications_popup_info1">
+            <button type="button" class="npap_notifications_closebtn" onclick="closeform_noti('popup_myForm_noti')">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="npap_notifications_popup_maincontent">
+                <form action="#">
+                    <div class="npap_notifications_maincontent_title">
+                        <h2>Notifications</h2>
+                    </div>
+                    <hr/>
+                    <div class="npap_notification_content">
+                        <a href="#">
+                            <div class="npap_notification_item">
+                                <p>'Falno Manxey' liked your news 'Samachar ko heading'</p>
+                            </div>
+                        </a>
+                        <hr/>
+                        <a href="#">
+                            <div class="npap_notification_item">
+                                <p>
+                                    'Falno Manxey' commented on your news 'Samachar ko heading'
+                                </p>
+                            </div>
+                        </a>
+                        <hr/>
+                        <a href="#">
+                            <div class="npap_notification_item">
+                                <p>'Falno Manxey' uniked your news 'Samachar ko heading'</p>
+                            </div>
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

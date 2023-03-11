@@ -1,0 +1,27 @@
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+.np_add2_container {
+    width: 95%;
+    height: 100%;
+    margin: 30px auto;
+}
+
+.add2_eachadd {
+    height: 150px;
+    /* border: 1px solid gray; */
+    margin: 15px;
+}
+.add2_eachadd img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.add2_eachadd p {
+    text-align: center;
+}

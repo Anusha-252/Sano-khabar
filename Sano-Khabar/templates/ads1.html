@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  {% load static %}
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/ads1.css' %}" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div class="np_add1_container">
+      
+      <div class="add1_eachadd">
+        {% for ads in ads_content_003 %} {% if ads.ads_num == 3 %}
+        <img src="{{ ads.photo_img.url }}" />
+        {% endif %} {% endfor %}
+      </div>
+      <div class="add1_eachadd">
+        {% for ads in ads_content_001 %} {% if ads.ads_num == 1 %}
+        <img src="{{ ads.photo_img.url }}" />
+        {% endif %} {% endfor %}
+      </div>
+      <div class="add1_eachadd">
+        {% for ads in ads_content_002 %} {% if ads.ads_num == 2 %}
+        <img src="{{ ads.photo_img.url }}" />
+        {% endif %} {% endfor %}
+      </div>
+      <div class="add1_eachadd">
+        {% for ads in ads_content_004 %} {% if ads.ads_num == 4 %}
+        <img src="{{ ads.photo_img.url }}" />
+        {% endif %} {% endfor %}
+      </div>
+     
+      
+      {% comment %} {% endfor %} {% for i in ads_query %} {% endfor %}
+      {%endcomment %}
+    </div>
+  </body>
+</html>
